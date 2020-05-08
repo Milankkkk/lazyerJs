@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>drag  滑动验证</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+</head>
+<body>
+     <h2>Drag  滑动验证</h2>
+     <div id="drag"></div>
+     <h3 style="margin-top: 80px;">Drag Attributes</h3>
+     <table class="lazyer-index-table" >
+         <thead><th>参数</th><th>说明</th><th>类型</th><th>可选值</th><th>默认值</th></thead>
+         <tbody>
+         <tr><td>width</td><td>滑动验证宽度</td><td>string</td><td>—</td><td>300px</td></tr>
+         <tr><td>height</td><td>滑动验证高度</td><td>string</td><td>—</td><td>36px</td></tr>
+         <tr><td>dragOK</td><td>验证成功函数</td><td>function</td><td>—</td><td>—</td></tr>
+         </tbody>
+     </table>
+</body>
+<script src="lazyerJs.js"></script>
+<script>
+    lazyerJs.init(function () {
+        let app = lazyerJs;
+        let $ = app.$;
+        app.requseModule(['drag'],function () {
+            let page = app.drag;
+            page.init();
+            page.setDrag();
+        })
+    });
+
+</script>
+</html>

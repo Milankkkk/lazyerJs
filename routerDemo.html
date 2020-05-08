@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>appPageMain</title>
+</head>
+<body>
+</body>
+<script src="./lazyerJs.js"></script>
+<script>
+
+    lazyerJs.init(function () {
+        let app = lazyerJs;
+        let $ = app.$;
+        app.requseModule(['router'],function () {
+            let router = app.router;
+            router.init();
+            //当 router 的 conf 配置 routerAutoRender 为 true时  set router 会自动载入
+            router.setRouter('/home/messageBox/alert');
+            //若 routerAutoRender 为 false 需要载入 则需执行 router.render()
+            //router.render()
+            //若需要自定义 路由视图路径 则需要配置 conf 的 viewPath 参数 ##请用绝对路径##
+            // app.conf.router['viewPath']='xxxxx';
+            router.render()
+        })
+    });
+
+</script>
+</html>

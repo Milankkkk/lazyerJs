@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Button 按钮</title>
+    <link rel="stylesheet" href="./lazyer_resource/font-awesome-4.7.0/css/font-awesome.css">
+</head>
+<body>
+    <h2>Button 按钮</h2>
+    <p>常用的操作按钮。</p>
+    <h2>基础用法</h2>
+    <p>基础的按钮用法。</p>
+    <div class="lazyer-content-container">
+        <div class="lazyer-button-basics-button">
+            <button class="lazyer-button">默认按钮</button>
+            <button class="lazyer-button-primary">主要按钮</button>
+            <button class="lazyer-button-success">成功按钮</button>
+            <button class="lazyer-button-info">信息按钮</button>
+            <button class="lazyer-button-warning">警告按钮</button>
+            <button class="lazyer-button-danger">危险按钮</button>
+        </div>
+        <div class="lazyer-button-basics-button">
+            <button class="lazyer-button-plain">朴素按钮</button>
+            <button class="lazyer-button-primary-plain">主要按钮</button>
+            <button class="lazyer-button-success-plain">成功按钮</button>
+            <button class="lazyer-button-info-plain">信息按钮</button>
+            <button class="lazyer-button-warning-plain">警告按钮</button>
+            <button class="lazyer-button-danger-plain">危险按钮</button>
+        </div>
+        <div class="lazyer-button-basics-button">
+            <button class="lazyer-button-round">圆角按钮</button>
+            <button class="lazyer-button-primary-round">主要按钮</button>
+            <button class="lazyer-button-success-round">成功按钮</button>
+            <button class="lazyer-button-info-round">信息按钮</button>
+            <button class="lazyer-button-warning-round">警告按钮</button>
+            <button class="lazyer-button-danger-round">危险按钮</button>
+        </div>
+        <div class="lazyer-button-basics-button">
+            <button class="lazyer-button-icon-search-circle"><i class="fa  fa-search"></i></button>
+            <button class="lazyer-button-icon-edit-circle"><i class="fa fa-edit"></i></button>
+            <button class="lazyer-button-icon-check-circle"><i class="fa fa-check"></i></button>
+            <button class="lazyer-button-icon-message-circle"><i class="fa fa-envelope-o"></i></button>
+            <button class="lazyer-button-icon-star-off-circle"><i class="fa  fa-star-o"></i></button>
+            <button class="lazyer-button-icon-delete-circle"><i class="fa  fa-trash-o"></i></button>
+        </div>
+    </div>
+    <h3>禁用状态</h3>
+    <p>按钮不可用状态。</p>
+    <div class="lazyer-content-container">
+        <div class="lazyer-button-basics-button">
+            <button class="lazyer-button" disabled="disabled">默认按钮</button>
+            <button class="lazyer-button-primary" disabled="disabled">主要按钮</button>
+            <button class="lazyer-button-success" disabled="disabled">成功按钮</button>
+            <button class="lazyer-button-info" disabled="disabled">信息按钮</button>
+            <button class="lazyer-button-warning" disabled="disabled">警告按钮</button>
+            <button class="lazyer-button-danger" disabled="disabled">危险按钮</button>
+        </div>
+        <div class="lazyer-button-basics-button">
+            <button class="lazyer-button-plain" disabled="disabled">朴素按钮</button>
+            <button class="lazyer-button-primary-plain" disabled="disabled">主要按钮</button>
+            <button class="lazyer-button-success-plain" disabled="disabled">成功按钮</button>
+            <button class="lazyer-button-info-plain" disabled="disabled">信息按钮</button>
+            <button class="lazyer-button-warning-plain" disabled="disabled">警告按钮</button>
+            <button class="lazyer-button-danger-plain" disabled="disabled">危险按钮</button>
+        </div>
+        <div class="lazyer-button-basics-button">
+            <button class="lazyer-button-round" disabled="disabled">圆角按钮</button>
+            <button class="lazyer-button-primary-round" disabled="disabled">主要按钮</button>
+            <button class="lazyer-button-success-round" disabled="disabled">成功按钮</button>
+            <button class="lazyer-button-info-round" disabled="disabled">信息按钮</button>
+            <button class="lazyer-button-warning-round" disabled="disabled">警告按钮</button>
+            <button class="lazyer-button-danger-round" disabled="disabled">危险按钮</button>
+        </div>
+        <div class="lazyer-button-basics-button">
+            <button class="lazyer-button-icon-search-circle" disabled="disabled"><i class="fa  fa-search"></i></button>
+            <button class="lazyer-button-icon-edit-circle" disabled="disabled"><i class="fa fa-edit"></i></button>
+            <button class="lazyer-button-icon-check-circle" disabled="disabled"><i class="fa fa-check"></i></button>
+            <button class="lazyer-button-icon-message-circle" disabled="disabled"><i class="fa fa-envelope-o"></i></button>
+            <button class="lazyer-button-icon-star-off-circle" disabled="disabled"><i class="fa  fa-star-o"></i></button>
+            <button class="lazyer-button-icon-delete-circle" disabled="disabled"><i class="fa  fa-trash-o"></i></button>
+        </div>
+    </div>
+    <h3>文字按钮</h3>
+    <p>没有边框和背景色的按钮。</p>
+    <div class="lazyer-content-container">
+        <div class="lazyer-button-basics-button">
+            <button class="lazyer-button-text">文字按钮</button>
+            <button class="lazyer-button-text" disabled="disabled">文字按钮</button>
+        </div>
+    </div>
+    <h3>图标按钮</h3>
+    <p>带图标的按钮可增强辨识度（有文字）或节省空间（无文字）。</p>
+    <div class="lazyer-content-container">
+        <div class="lazyer-button-basics-button">
+            <button class="lazyer-button-primary"><i class="fa fa-edit"></i></button>
+            <button class="lazyer-button-primary"><i class="fa  fa fa-share-alt"></i></button>
+            <button class="lazyer-button-primary"><i class="fa  fa-trash-o"></i></button>
+            <button class="lazyer-button-primary"><i class="fa  fa-search"></i><span>搜索</span></button>
+            <button class="lazyer-button-primary"><span>上传</span><i class="fa  fa fa-cloud-upload"></i></button>
+        </div>
+    </div>
+    <h3>按钮组</h3>
+    <p>以按钮组的方式出现，常用于多项类似操作。</p>
+    <div class="lazyer-content-container">
+        <div class="lazyer-button-group-box">
+            <div class="lazyer-button-group lazyer-button-group-pag">
+                <button class="lazyer-button-primary"><i class="fa fa-angle-left"></i><span>上一页</span></button>
+                <button class="lazyer-button-primary"><span>下一页</span><i class="fa fa-angle-right"></i></button>
+                <button class="lazyer-button-primary"><span>下一页</span><i class="fa fa-angle-right"></i></button>
+            </div>
+            <div class="lazyer-button-group  lazyer-button-group-icon">
+                <button class="lazyer-button-primary"><i class="fa fa-edit"></i></button>
+                <button class="lazyer-button-primary"><i class="fa  fa fa-share-alt"></i></button>
+                <button class="lazyer-button-primary"><i class="fa  fa-trash-o"></i></button>
+            </div>
+        </div>
+    </div>
+    <h3>加载中</h3>
+    <p>点击按钮后进行数据加载操作，在按钮上显示加载状态。</p>
+    <div class="lazyer-content-container">
+        <button class="lazyer-button-primary lazyer-button-disabled lazyer-button-spinner"><i class="fa fa-spinner"></i><span>加载中</span></button>
+    </div>
+    <h3>不同尺寸</h3>
+    <p>Button 组件提供除了默认值以外的三种尺寸，可以在不同场景下选择合适的按钮尺寸。</p>
+    <div class="lazyer-content-container">
+        <div class="lazyer-button-basics-button">
+            <button class="lazyer-button">默认按钮</button>
+            <button class="lazyer-button lazyer-button-medium">中等按钮</button>
+            <button class="lazyer-button lazyer-button-small">小型按钮</button>
+            <button class="lazyer-button lazyer-button-mini">超小按钮</button>
+        </div>
+        <div class="lazyer-button-basics-button">
+            <button class="lazyer-button lazyer-button-round">默认按钮</button>
+            <button class="lazyer-button lazyer-button-round lazyer-button-medium">中等按钮</button>
+            <button class="lazyer-button lazyer-button-round lazyer-button-small">小型按钮</button>
+            <button class="lazyer-button lazyer-button-round lazyer-button-mini">超小按钮</button>
+        </div>
+    </div>
+    <h3>包含的类名及其含义</h3>
+    <p>默认按钮类名为：</p>
+    <ul class="lazyer-class-box">
+        <li>lazyer-button - 默认按钮</li>
+        <li>lazyer-button-primary - 主要按钮</li>
+        <li>lazyer-button-success - 成功按钮</li>
+        <li>lazyer-button-info - 信息按钮</li>
+        <li>lazyer-button-warning - 警告按钮</li>
+        <li>lazyer-button-danger - 危险按钮</li>
+    </ul>
+    <p>朴素按钮类名为：</p>
+    <ul class="lazyer-class-box">
+        <li>lazyer-button-plain - 朴素按钮</li>
+        <li>lazyer-button-primary-plain - 主要按钮</li>
+        <li>lazyer-button-success-plain - 成功按钮</li>
+        <li>lazyer-button-info-plain - 信息按钮</li>
+        <li>lazyer-button-warning-plain - 警告按钮</li>
+        <li>lazyer-button-danger-plain - 危险按钮</li>
+    </ul>
+    <p>圆角按钮类名为：</p>
+    <ul class="lazyer-class-box">
+        <li>lazyer-button-round - 圆角按钮</li>
+        <li>lazyer-button-primary-round - 主要按钮</li>
+        <li>lazyer-button-success-round - 成功按钮</li>
+        <li>lazyer-button-info-round - 信息按钮</li>
+        <li>lazyer-button-warning-round - 警告按钮</li>
+        <li>lazyer-button-danger-round - 危险按钮</li>
+    </ul>
+    <p>圆形图标按钮类名为：</p>
+    <ul class="lazyer-class-box">
+        <li>lazyer-button-icon-search-circle - 搜索圆形图标按钮</li>
+        <li>lazyer-button-icon-edit-circle - 编辑圆形图标按钮</li>
+        <li>lazyer-button-icon-check-circle - 成功圆形图标按钮</li>
+        <li>lazyer-button-icon-message-circle - 信息圆形图标按钮</li>
+        <li>lazyer-button-icon-star-off-circle - 收藏圆形图标按钮</li>
+        <li>lazyer-button-icon-delete-circle - 删除圆形图标按钮</li>
+    </ul>
+    <p>禁用按钮添加属性disabled：</p>
+    <ul class="lazyer-class-box">
+        <li>disabled="disabled" - 禁止按钮点击</li>
+    </ul>
+    <p>文字按钮类名为：</p>
+    <ul class="lazyer-class-box">
+        <li>lazyer-button-text - 没有边框和背景色的文字按钮</li>
+    </ul>
+    <p>按钮组类名为：</p>
+    <ul class="lazyer-class-box">
+        <li>lazyer-button-group - 用来嵌套按钮组</li>
+        <li>lazyer-button-group-pag - 适用于两个分页按钮组</li>
+        <li>lazyer-button-group-icon - 适用于三个图标按钮组</li>
+    </ul>
+    <p>加载中按钮类名为：</p>
+    <ul class="lazyer-class-box">
+        <li>lazyer-button-spinner - 点击按钮后进行数据加载操作，在按钮上显示加载状态</li>
+    </ul>
+    <p>不同尺寸按钮类名为：</p>
+    <ul class="lazyer-class-box" style="margin-bottom: 50px;">
+        <li>lazyer-button - 默认按钮</li>
+        <li>lazyer-button-medium - 中等按钮</li>
+        <li>lazyer-button-small - 小型按钮</li>
+        <li>lazyer-button-mini - 超小按钮</li>
+    </ul>
+</body>
+<script src="lazyerJs.js"></script>
+<script>
+    lazyerJs.init(function () {});
+</script>
+</html>

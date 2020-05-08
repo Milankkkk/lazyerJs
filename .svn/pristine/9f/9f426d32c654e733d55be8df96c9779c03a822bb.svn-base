@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>container  布局容器</title>
+</head>
+<body>
+<h2>Container  布局容器</h2>
+<p>用于布局的容器组件，方便快速搭建页面的基本结构：</p>
+<p>.lazyer-container  外层容器。当子元素中包含 .lazyer-header 或 .lazyer-footer 时，全部子元素会垂直上下排列，否则会水平左右排列。</p>
+<p>.lazyer-header  顶栏容器</p>
+<p>.lazyer-main  主要区域容器</p>
+<p>.lazyer-aside  侧栏容器</p>
+<p>.lazyer-footer  底栏容器</p>
+<div class="tip">
+    <p>
+        以上组件采用了 flex 布局，使用前请确定目标浏览器是否兼容。此外，<.lazyer-container> 的子元素只能是后四者，后四者的父元素也只能是 <.lazyer-container>。</p>
+</div>
+<h3>常见页面布局</h3>
+<div class="lazyer-container is-vertical" style="margin-bottom: 30px;">
+    <div class="lazyer-header">Header</div>
+    <div class="lazyer-main">Main</div>
+</div>
+<div class="lazyer-container is-vertical" style="margin-bottom: 30px;">
+    <div class="lazyer-header">Header</div>
+    <div class="lazyer-main">Main</div>
+    <div class="lazyer-footer">Footer</div>
+</div>
+<div class="lazyer-container" style="margin-bottom: 30px;">
+    <div class="lazyer-aside" style="width: 300px;">Aside</div>
+    <div class="lazyer-main">Main</div>
+</div>
+<div class="lazyer-container is-vertical" style="margin-bottom: 30px;">
+    <div class="lazyer-header">Header</div>
+    <div class="lazyer-container">
+        <div class="lazyer-aside" style="width: 300px;">Aside</div>
+        <div class="lazyer-main">Main</div>
+    </div>
+</div>
+<div class="lazyer-container is-vertical" style="margin-bottom: 30px;">
+    <div class="lazyer-header">Header</div>
+    <div class="lazyer-container">
+        <div class="lazyer-aside" style="width: 300px;">Aside</div>
+        <div class="lazyer-container is-vertical">
+            <div class="lazyer-main">Main</div>
+            <div class="lazyer-footer">Footer</div>
+        </div>
+    </div>
+</div>
+<div class="lazyer-container" style="margin-bottom: 30px;">
+    <div class="lazyer-aside" style="width: 300px;">Aside</div>
+    <div class="lazyer-container is-vertical">
+        <div class="lazyer-header">Header</div>
+        <div class="lazyer-main">Main</div>
+    </div>
+</div>
+<div class="lazyer-container" style="margin-bottom: 30px;">
+    <div class="lazyer-aside" style="width: 300px;">Aside</div>
+    <div class="lazyer-container is-vertical">
+        <div class="lazyer-header">Header</div>
+        <div class="lazyer-main">Main</div>
+        <div class="lazyer-footer">Footer</div>
+    </div>
+</div>
+<h3>Container Attributes</h3>
+<table class="lazyer-index-table">
+    <thead><th>参数</th><th>说明</th><th>类型</th><th>可选值</th><th>默认值</th></thead>
+    <tbody>
+    <tr><td>is-vertical</td><td>子元素的排列方向</td><td>string</td><td>—</td><td><.lazyer-container>calss添加is-vertical子元素为vertical，不添加为horizontal</td></tr>
+    </tbody>
+</table>
+<h3>Header Attributes</h3>
+<table class="lazyer-index-table">
+    <thead><th>参数</th><th>说明</th><th>类型</th><th>可选值</th><th>默认值</th></thead>
+    <tbody>
+    <tr><td>height</td><td>顶栏高度</td><td>string</td><td>—</td><td>60px</td></tr>
+    </tbody>
+</table>
+<h3>Aside Attributes</h3>
+<table class="lazyer-index-table">
+    <thead><th>参数</th><th>说明</th><th>类型</th><th>可选值</th><th>默认值</th></thead>
+    <tbody>
+    <tr><td>width</td><td>侧边栏宽度</td><td>string</td><td>—</td><td>300px</td></tr>
+    </tbody>
+</table>
+<h3>Footer Attributes</h3>
+<table class="lazyer-index-table" style="margin-bottom: 50px;">
+    <thead><th>参数</th><th>说明</th><th>类型</th><th>可选值</th><th>默认值</th></thead>
+    <tbody>
+    <tr><td>height</td><td>底栏高度</td><td>string</td><td>—</td><td>60px</td></tr>
+    </tbody>
+</table>
+</body>
+<script src="lazyerJs.js"></script>
+<script>
+    lazyerJs.init(function(){});
+</script>
+</html>

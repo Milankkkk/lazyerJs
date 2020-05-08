@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tailorImg  裁剪图片插件</title>
+</head>
+<body>
+<div id="tailorImgContainer"></div>
+
+<script src="lazyerJs.js"></script>
+<script>
+    lazyerJs.init(function () {
+        let app = lazyerJs;
+        let $ = app.$;
+        app.requseModule(['tailorImg'],function () {
+            let page = app.tailorImg;
+            page.init();
+            page.setTailor();
+        })
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>border 边框</title>
+</head>
+<body>
+  <h2>Border 边框</h2>
+  <p>我们对边框进行统一规范，可用于按钮、卡片、弹窗等组件里。</p>
+  <h3>边框</h3>
+  <p>我们提供了以下几种边框样式，以供选择。</p>
+  <table class="lazyer-index-table lazyer-border-table" >
+      <thead><th>名称</th><th>粗细</th><th>举例</th></thead>
+      <tbody>
+      <tr class="lazyer-typography-tr1"><td>实线</td><td>1px</td><td><div class="lazyer-border-td-div1"></div></td></tr>
+      <tr class="lazyer-typography-tr2"><td>虚线</td><td>2px</td><td><div class="lazyer-border-td-div2"></div></td></tr>
+      </tbody>
+  </table>
+  <h3>圆角</h3>
+  <p>我们提供了以下几种圆角样式，以供选择。</p>
+  <div class="lazyer-border-radius">
+      <div>
+          <div>无圆角</div>
+          <div>border-radius:0px</div>
+          <div class="lazyer-border-radius0"></div>
+      </div>
+      <div>
+          <div>小圆角</div>
+          <div>border-radius:2px</div>
+          <div class="lazyer-border-radius2"></div>
+      </div>
+      <div>
+          <div>大圆角</div>
+          <div>border-radius:4px</div>
+          <div class="lazyer-border-radius4"></div>
+      </div>
+      <div>
+          <div>圆形圆角</div>
+          <div>border-radius:30px</div>
+          <div class="lazyer-border-radius30"></div>
+      </div>
+  </div>
+  <h3>投影</h3>
+  <p>我们提供了以下几种投影样式，以供选择。</p>
+  <div class="lazyer-border-box-shadow1"></div>
+  <p>基础投影 box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04)</p>
+  <div class="lazyer-border-box-shadow2"></div>
+  <p>浅色投影 box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1)</p>
+</body>
+<script src="lazyerJs.js"></script>
+<script>
+    lazyerJs.init(function(){});
+</script>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>date  日期选择器</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+</head>
+<body>
+  <div id="warp">
+      <div id="date"></div>
+  </div>
+</body>
+<script src="lazyerJs.js"></script>
+<script>
+    lazyerJs.init(function () {
+        let app = lazyerJs;
+        let $ = app.$;
+        app.requseModule(['date'],function () {
+            let page = app.date;
+            page.init();
+            page.setDate();
+        })
+    });
+</script>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Carousel 轮播</title>
+    <link rel="stylesheet" href="./lazyer_resource/font-awesome-4.7.0/css/font-awesome.css">
+</head>
+<body>
+    <h2>Carousel 轮播</h2>
+    <div class="carousel-container">
+        <div class="carousel-wrapper">
+            <div class="carousel-slide">slide  1</div>
+            <div class="carousel-slide">slide  2</div>
+            <div class="carousel-slide">slide  3</div>
+            <div class="carousel-slide">slide  4</div>
+            <div class="carousel-slide">slide  5</div>
+        </div>
+        <!--如果需要分页器 -->
+        <div class="carousel-pagination"></div>
+        <!-- 如果需要导航按钮 -->
+        <div class="carousel-button-prev"></div>
+        <div class="carousel-button-next"></div>
+    </div>
+    <h3>Carousel Attributes</h3>
+    <table class="lazyer-index-table">
+        <thead><th>参数</th><th>说明</th><th>类型</th><th>可选值</th><th>默认值</th></thead>
+        <tbody>
+        <tr><td>carouselWhite</td><td>轮播图宽度</td><td>number</td><td>—</td><td>—</td></tr>
+        <tr><td>carouselHeight</td><td>轮播图高度</td><td>number</td><td>—</td><td>300</td></tr>
+        <tr><td>pagSize</td><td>分页器大小</td><td>number</td><td>—</td><td>10</td></tr>
+        <tr><td>iconSize</td><td>左右按钮大小</td><td>number</td><td>—</td><td>50</td></tr>
+        </tbody>
+    </table>
+    <h3>Code</h3>
+    <pre style="background: #202f3d;
+    color: #fff;">
+
+  &lt;!DOCTYPE html&gt;
+  &lt;html lang="en"&gt;
+  &lt;head&gt;
+      &lt;meta charset="UTF-8"&gt;
+      &lt;title&gt;Carousel 轮播&lt;/title&gt;
+      &lt;link rel="stylesheet" href="./lazyer_resource/font-awesome-4.7.0/css/font-awesome.css"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+      &lt;h2&gt;Carousel 轮播&lt;/h2&gt;
+      &lt;div class="carousel-container"&gt;
+          &lt;div class="carousel-wrapper"&gt;
+              &lt;div class="carousel-slide"&gt;slide  1&lt;/div&gt;
+              &lt;div class="carousel-slide"&gt;slide  2&lt;/div&gt;
+              &lt;div class="carousel-slide"&gt;slide  3&lt;/div&gt;
+              &lt;div class="carousel-slide"&gt;slide  4&lt;/div&gt;
+              &lt;div class="carousel-slide"&gt;slide  5&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;!--如果需要分页器 --&gt;
+          &lt;div class="carousel-pagination"&gt;&lt;/div&gt;
+          &lt;!-- 如果需要导航按钮 --&gt;
+          &lt;div class="carousel-button-prev"&gt;&lt;/div&gt;
+          &lt;div class="carousel-button-next"&gt;&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;h3&gt;Carousel Attributes&lt;/h3&gt;
+      &lt;table class="lazyer-index-table"&gt;
+          &lt;thead&gt;&lt;th&gt;参数&lt;/th&gt;&lt;th&gt;说明&lt;/th&gt;&lt;th&gt;类型&lt;/th&gt;&lt;th&gt;可选值&lt;/th&gt;&lt;th&gt;默认值&lt;/th&gt;&lt;/thead&gt;
+          &lt;tbody&gt;
+          &lt;tr&gt;&lt;td&gt;carouselWhite&lt;/td&gt;&lt;td&gt;轮播图宽度&lt;/td&gt;&lt;td&gt;number&lt;/td&gt;&lt;td&gt;—&lt;/td&gt;&lt;td&gt;—&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;carouselHeight&lt;/td&gt;&lt;td&gt;轮播图高度&lt;/td&gt;&lt;td&gt;number&lt;/td&gt;&lt;td&gt;—&lt;/td&gt;&lt;td&gt;300&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;pagSize&lt;/td&gt;&lt;td&gt;分页器大小&lt;/td&gt;&lt;td&gt;number&lt;/td&gt;&lt;td&gt;—&lt;/td&gt;&lt;td&gt;10&lt;/td&gt;&lt;/tr&gt;
+          &lt;tr&gt;&lt;td&gt;iconSize&lt;/td&gt;&lt;td&gt;左右按钮大小&lt;/td&gt;&lt;td&gt;number&lt;/td&gt;&lt;td&gt;—&lt;/td&gt;&lt;td&gt;50&lt;/td&gt;&lt;/tr&gt;
+          &lt;/tbody&gt;
+      &lt;/table&gt;
+  &lt;/body&gt;
+  &lt;script src="lazyerJs.js"&gt;&lt;/script&gt;
+  &lt;script&gt;
+      lazyerJs.init(function () {
+          let app = lazyerJs;
+          let $ = app.$;
+          app.requseModule(['carousel'],function () {
+              let page = app.carousel;
+              page.setCarousel(null,300);
+          })
+      });
+  &lt;/script&gt;
+  &lt;/html&gt;
+    </pre>
+</body>
+<script src="lazyerJs.js"></script>
+<script>
+    lazyerJs.init(function () {
+        let app = lazyerJs;
+        let $ = app.$;
+        app.requseModule(['carousel'],function () {
+            let page = app.carousel;
+            page.setCarousel(null,300);
+        })
+    });
+
+</script>
+</html>

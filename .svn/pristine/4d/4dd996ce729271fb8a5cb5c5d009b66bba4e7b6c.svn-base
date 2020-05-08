@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>waterfall 瀑布流 懒加载</title>
+</head>
+<body>
+    <div id="waterfall" class="waterfall">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x100" data-src="http://via.placeholder.com/100x100"  alt="100*100">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x70" data-src="http://via.placeholder.com/100x70"  alt="100*70">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x150" data-src="http://via.placeholder.com/100x150"  alt="100*150">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x250" data-src="http://via.placeholder.com/100x250"  alt="100*250">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x80" data-src="http://via.placeholder.com/100x80"  alt="100*80">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x90" data-src="http://via.placeholder.com/100x90"  alt="100*90">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x120" data-src="http://via.placeholder.com/100x120"  alt="100*120">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x210" data-src="http://via.placeholder.com/100x210"  alt="100*210">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x230" data-src="http://via.placeholder.com/100x230"  alt="100*230">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x100" data-src="http://via.placeholder.com/100x100"  alt="100*100">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x70" data-src="http://via.placeholder.com/100x70"  alt="100*70">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x150" data-src="http://via.placeholder.com/100x150"  alt="100*150">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x250" data-src="http://via.placeholder.com/100x250"  alt="100*250">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x80" data-src="http://via.placeholder.com/100x80"  alt="100*80">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x90" data-src="http://via.placeholder.com/100x90"  alt="100*90">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x120" data-src="http://via.placeholder.com/100x120"  alt="100*120">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x210" data-src="http://via.placeholder.com/100x210"  alt="100*210">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x230" data-src="http://via.placeholder.com/100x230"  alt="100*230">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x100" data-src="http://via.placeholder.com/100x100"  alt="100*100">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x70" data-src="http://via.placeholder.com/100x70"  alt="100*70">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x150" data-src="http://via.placeholder.com/100x150"  alt="100*150">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x250" data-src="http://via.placeholder.com/100x250"  alt="100*250">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x80" data-src="http://via.placeholder.com/100x80"  alt="100*80">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x90" data-src="http://via.placeholder.com/100x90"  alt="100*90">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x120" data-src="http://via.placeholder.com/100x120"  alt="100*120">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x210" data-src="http://via.placeholder.com/100x210"  alt="100*210">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x230" data-src="http://via.placeholder.com/100x230"  alt="100*230">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x100" data-src="http://via.placeholder.com/100x100"  alt="100*100">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x70" data-src="http://via.placeholder.com/100x70"  alt="100*70">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x150" data-src="http://via.placeholder.com/100x150"  alt="100*150">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x250" data-src="http://via.placeholder.com/100x250"  alt="100*250">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x80" data-src="http://via.placeholder.com/100x80"  alt="100*80">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x90" data-src="http://via.placeholder.com/100x90"  alt="100*90">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x120" data-src="http://via.placeholder.com/100x120"  alt="100*120">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x210" data-src="http://via.placeholder.com/100x210"  alt="100*210">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x230" data-src="http://via.placeholder.com/100x230"  alt="100*230">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x100" data-src="http://via.placeholder.com/100x100"  alt="100*100">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x70" data-src="http://via.placeholder.com/100x70"  alt="100*70">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x150" data-src="http://via.placeholder.com/100x150"  alt="100*150">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x250" data-src="http://via.placeholder.com/100x250"  alt="100*250">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x80" data-src="http://via.placeholder.com/100x80"  alt="100*80">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x90" data-src="http://via.placeholder.com/100x90"  alt="100*90">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x120" data-src="http://via.placeholder.com/100x120"  alt="100*120">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x210" data-src="http://via.placeholder.com/100x210"  alt="100*210">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x230" data-src="http://via.placeholder.com/100x230"  alt="100*230">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x100" data-src="http://via.placeholder.com/100x100"  alt="100*100">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x70" data-src="http://via.placeholder.com/100x70"  alt="100*70">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x150" data-src="http://via.placeholder.com/100x150"  alt="100*150">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x250" data-src="http://via.placeholder.com/100x250"  alt="100*250">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x80" data-src="http://via.placeholder.com/100x80"  alt="100*80">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x90" data-src="http://via.placeholder.com/100x90"  alt="100*90">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x120" data-src="http://via.placeholder.com/100x120"  alt="100*120">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x210" data-src="http://via.placeholder.com/100x210"  alt="100*210">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x230" data-src="http://via.placeholder.com/100x230"  alt="100*230">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x100" data-src="http://via.placeholder.com/100x100"  alt="100*100">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x70" data-src="http://via.placeholder.com/100x70"  alt="100*70">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x150" data-src="http://via.placeholder.com/100x150"  alt="100*150">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x250" data-src="http://via.placeholder.com/100x250"  alt="100*250">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x80" data-src="http://via.placeholder.com/100x80"  alt="100*80">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x90" data-src="http://via.placeholder.com/100x90"  alt="100*90">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x120" data-src="http://via.placeholder.com/100x120"  alt="100*120">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x210" data-src="http://via.placeholder.com/100x210"  alt="100*210">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x230" data-src="http://via.placeholder.com/100x230"  alt="100*230">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x100" data-src="http://via.placeholder.com/100x100"  alt="100*100">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x70" data-src="http://via.placeholder.com/100x70"  alt="100*70">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x150" data-src="http://via.placeholder.com/100x150"  alt="100*150">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x250" data-src="http://via.placeholder.com/100x250"  alt="100*250">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x80" data-src="http://via.placeholder.com/100x80"  alt="100*80">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x90" data-src="http://via.placeholder.com/100x90"  alt="100*90">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x120" data-src="http://via.placeholder.com/100x120"  alt="100*120">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x210" data-src="http://via.placeholder.com/100x210"  alt="100*210">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x230" data-src="http://via.placeholder.com/100x230"  alt="100*230">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x100" data-src="http://via.placeholder.com/100x100"  alt="100*100">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x70" data-src="http://via.placeholder.com/100x70"  alt="100*70">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x150" data-src="http://via.placeholder.com/100x150"  alt="100*150">
+        <img  src="/lazyerJs/zwt.jpg"  temp="100x250" data-src="http://via.placeholder.com/100x250"  alt="100*250">
+        <img data-src="http://via.placeholder.com/100x80"  alt="100*80">
+        <img data-src="http://via.placeholder.com/100x90"  alt="100*90">
+        <img data-src="http://via.placeholder.com/100x120"  alt="100*120">
+        <img data-src="http://via.placeholder.com/100x210"  alt="100*210">
+        <img data-src="http://via.placeholder.com/100x230"  alt="100*230">
+    </div>
+</body>
+<script src="lazyerJs.js"></script>
+<script>
+    lazyerJs.init(function () {
+        let app = lazyerJs;
+        let $ = app.$;
+        app.requseModule(['waterfall'],function () {
+            let page = app.waterfall;
+            page.init('waterfall');
+            //or
+            //page.setDefaultDivId('waterfall');
+            page.setWaterfall();
+            let html = $('#waterfall').html();
+            page.setPageIsOver(function () {
+                $('#waterfall').append(html)
+            })
+        })
+    });
+
+</script>
+</html>

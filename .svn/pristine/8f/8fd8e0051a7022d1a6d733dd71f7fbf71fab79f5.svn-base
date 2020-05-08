@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+#imgfileBox{
+    width:695px ;
+    padding: 30px;
+    margin: 50px auto 100px;
+    border: 1px solid #999999;
+    border-radius: 5px;
+    text-align: center;
+}
+.imgBox{
+    display: flex;
+}
+#imgFiles{
+    width: 150px;
+    height: 150px;
+    border: 1px dashed #E0DDE0;
+    cursor: pointer;
+    border-radius: 10px;
+}
+#imgFiles:hover {
+    border: 1px dashed #666666;
+}
+.imgfile {
+    display: none;
+}
+.lookimg {
+    width: 150px;
+    height: 150px;
+    float: left;
+    margin: 0  0  10px 10px;
+    position: relative;
+    border-radius: 10px;
+}
+.lookimg img:nth-of-type(1) {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.lookimgDelBtn {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 30px;
+    height: 30px;
+    opacity: 0.8;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.lookimgDelBtn:hover {
+    opacity: 1;
+}
+#ImgUpStartBtn{
+    width: 100px;
+    height: 40px;
+    margin-top: 40px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color:#409eff;
+    box-shadow:  1px 1px 3px #345aff;
+    color: white;
+    font-size: 16px;
+}
+#ImgUpStartBtn:hover{
+    background-color: #66b1ff;
+}
+

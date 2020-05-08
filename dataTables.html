@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dataTables  表格</title>
+   <link rel="stylesheet" href="./lazyer_resource/font-awesome-4.7.0/css/font-awesome.css">
+</head>
+<body>
+   <h2>DataTables  表格</h2>
+   <div id="dataTables"></div>
+   <h3>Table Attributes</h3>
+   <table class="lazyer-index-table">
+       <thead><th>参数</th><th>说明</th><th>类型</th><th>可选值</th><th>默认值</th></thead>
+       <tbody>
+       <tr><td>thead</td><td>指定列名</td><td>object</td><td>—</td><td>—</td></tr>
+       <tr><td>columns</td><td>显示的数据</td><td>array</td><td>—</td><td>—</td></tr>
+       <tr><td>dataNum</td><td>每页显示数据条数</td><td>number</td><td>5/10/15/20</td><td>5</td></tr>
+       <tr><td>numShowLen</td><td>数字按钮每页显示的个数</td><td>number</td><td>—</td><td>5</td></tr>
+       </tbody>
+   </table>
+   <h3>Code</h3>
+   <pre style="background: #202f3d;
+    color: #fff;">
+
+   &lt;!DOCTYPE html&gt;
+   &lt;html lang="en"&gt;
+   &lt;head&gt;
+     &lt;meta charset="UTF-8"&gt;
+     &lt;title&gt;dataTables  表格&lt;/title&gt;
+     &lt;link rel="stylesheet" href="./lazyer_resource/font-awesome-4.7.0/css/font-awesome.css"&gt;
+   &lt;/head&gt;
+   &lt;body&gt;
+     &lt;h2&gt;DataTables  表格&lt;/h2&gt;
+     &lt;div id="dataTables"&gt;&lt;/div&gt;
+     &lt;h3&gt;Table Attributes&lt;/h3&gt;
+     &lt;table class="lazyer-index-table"&gt;
+     &lt;thead&gt;&lt;th&gt;参数&lt;/th&gt;&lt;th&gt;说明&lt;/th&gt;&lt;th&gt;类型&lt;/th&gt;&lt;th&gt;可选值&lt;/th&gt;&lt;th&gt;默认值&lt;/th&gt;&lt;/thead&gt;
+     &lt;tbody&gt;
+     &lt;tr&gt;&lt;td&gt;thead&lt;/td&gt;&lt;td&gt;指定列名&lt;/td&gt;&lt;td&gt;object&lt;/td&gt;&lt;td&gt;—&lt;/td&gt;&lt;td&gt;—&lt;/td&gt;&lt;/tr&gt;
+     &lt;tr&gt;&lt;td&gt;columns&lt;/td&gt;&lt;td&gt;显示的数据&lt;/td&gt;&lt;td&gt;array&lt;/td&gt;&lt;td&gt;—&lt;/td&gt;&lt;td&gt;—&lt;/td&gt;&lt;/tr&gt;
+     &lt;tr&gt;&lt;td&gt;dataNum&lt;/td&gt;&lt;td&gt;每页显示数据条数&lt;/td&gt;&lt;td&gt;number&lt;/td&gt;&lt;td&gt;5/10/15/20&lt;/td&gt;&lt;td&gt;5&lt;/td&gt;&lt;/tr&gt;
+     &lt;tr&gt;&lt;td&gt;numShowLen&lt;/td&gt;&lt;td&gt;数字按钮每页显示的个数&lt;/td&gt;&lt;td&gt;number&lt;/td&gt;&lt;td&gt;—&lt;/td&gt;&lt;td&gt;5&lt;/td&gt;&lt;/tr&gt;
+     &lt;/tbody&gt;
+     &lt;/table&gt;
+   &lt;/body&gt;
+   &lt;script src="lazyerJs.js"&gt;&lt;/script&gt;
+   &lt;script&gt;
+     lazyerJs.init(function () {
+     let app = lazyerJs;
+     let $ = app.$;
+     app.requseModule(['dataTables'],function () {
+         let page = app.dataTables;
+         page.init();
+         page.setDataTables();
+       })
+     });
+   &lt;/script&gt;
+   &lt;/html&gt;
+   </pre>
+</body>
+<script src="lazyerJs.js"></script>
+<script>
+    lazyerJs.init(function () {
+        let app = lazyerJs;
+        let $ = app.$;
+        app.requseModule(['dataTables'],function () {
+            let page = app.dataTables;
+            page.init();
+            page.setDataTables();
+        })
+    });
+</script>
+</html>

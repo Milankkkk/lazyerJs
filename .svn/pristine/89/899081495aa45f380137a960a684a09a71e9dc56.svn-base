@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>uploadImg  异步上传图片</title>
+</head>
+<body>
+    <h2>UploadImg  异步上传图片</h2>
+    <div id="imgfileBox">
+        <div class="imgBox">
+            <img src="./lazyer_resource/images/upLoadImg/addImg.jpg"  id="imgFiles">
+            <div id="imgLook">
+                <div style="clear: both;"></div>
+            </div>
+        </div>
+        <input type="button" value="确定上传" id="ImgUpStartBtn" />
+    </div>
+    <h3>UploadImg Attributes</h3>
+    <table class="lazyer-index-table">
+        <thead><th>参数</th><th>说明</th><th>类型</th><th>可选值</th><th>默认值</th></thead>
+        <tbody>
+        <tr><td>imgLength</td><td>上传图片最大大小，单位(M)</td><td>number</td><td>—</td><td>1</td></tr>
+        <tr><td>imgMaxCount</td><td>最多选中图片张数</td><td>number</td><td>—</td><td>4</td></tr>
+        <tr><td>imgAjaxPath</td><td>异步传输服务端位置</td><td>http</td><td>—</td><td>—</td></tr>
+        </tbody>
+    </table>
+</body>
+<script src="lazyerJs.js"></script>
+<script>
+    lazyerJs.init(function () {
+        let app = lazyerJs;
+        let $ = app.$;
+        app.requseModule(['uploadImg'],function () {
+            let page = app.uploadImg;
+            page.setImgAjaxUrl('http://zztdw.cn/abcd.php?yzy=1');
+            page.setUploadImg();
+        })
+    });
+</script>
+</html>

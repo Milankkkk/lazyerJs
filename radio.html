@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Radio 单选框</title>
+</head>
+<body>
+    <h2>Radio 单选框</h2>
+    <p>在一组备选项中进行单选</p>
+    <h3>基础用法</h3>
+    <p>由于选项默认可见，不宜过多，若选项过多，建议使用 Select 选择器。</p>
+    <div class="lazyer-content-container-flex">
+        <div class="lazyer-radio-box">
+            <input type="radio" name="radio" value="radio1">
+            <span class="lazyer-radio-label">备选项</span>
+        </div>
+        <div class="lazyer-radio-box">
+            <input type="radio" name="radio" value="radio2">
+            <span  class="lazyer-radio-label">备选项</span>
+        </div>
+    </div>
+    <h3>禁用状态</h3>
+    <p>单选框不可用的状态。</p>
+    <div class="lazyer-content-container-flex">
+        <div class="lazyer-radio-disabled-box">
+            <input type="radio" name="radio" value="radio1" class="lazyer-radio" disabled>
+            <span class="lazyer-radio-label">备选项</span>
+        </div>
+        <div class="lazyer-radio-disabled-box">
+            <input type="radio" name="radio" value="radio2" class="lazyer-radio" disabled checked>
+            <span  class="lazyer-radio-label">备选项</span>
+        </div>
+    </div>
+
+</body>
+<script src="lazyerJs.js"></script>
+<script>
+    lazyerJs.init(function () {});
+</script>
+</html>

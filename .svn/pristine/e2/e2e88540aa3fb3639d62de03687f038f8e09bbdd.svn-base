@@ -1,0 +1,233 @@
+/**
+   layout栅格布局
+   * @class   .lazyer-col- 针对所有设备(超小设备 >= 320px)
+   * @class   .lazyer-col-sm- 平板 - 屏幕宽度 >= 576px
+   * @class   .lazyer-col-md- 桌面显示器 - 屏幕宽度 >= 768px
+   * @class   .lazyer-col-lg- 大桌面显示器 - 屏幕宽度 >= 992px
+   * @class   .lazyer-col-xl- 超大桌面显示器 - 屏幕宽度 >= 1200px
+*/
+.lazyer-row{
+    width: 100%;
+    display: -ms-flexbox;
+    -ms-flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.lazyer-row>div:nth-of-type(2n){
+    background-color: rgb(50,144,244);
+}
+.lazyer-row>div:nth-of-type(2n+1){
+    background-color: lavender;
+}
+.lazyer-col{
+    -ms-flex-preferred-size: 0;
+    -ms-flex-positive: 1;
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+}
+.lazyer-col-sm-1,.lazyer-col-md-1,.lazyer-col-lg-1,.lazyer-col-xl-1{
+    width: calc(100% / 12);
+}
+.lazyer-col-sm-2,.lazyer-col-md-2,.lazyer-col-lg-2,.lazyer-col-xl-2{
+    width:calc(100% / 6);
+}
+.lazyer-col-sm-3,.lazyer-col-md-3,.lazyer-col-lg-3,.lazyer-col-xl-3{
+    width:calc(100% / 4);
+}
+.lazyer-col-sm-4,.lazyer-col-md-4,.lazyer-col-lg-4,.lazyer-col-xl-4{
+    width:calc(100% / 3);
+}
+.lazyer-col-sm-5,.lazyer-col-md-5,.lazyer-col-lg-5,.lazyer-col-xl-5{
+    width:calc(100% / 12 * 5);
+}
+.lazyer-col-sm-6,.lazyer-col-md-6,.lazyer-col-lg-6,.lazyer-col-xl-6{
+    width:calc(100% / 2);
+}
+.lazyer-col-sm-7,.lazyer-col-md-7,.lazyer-col-lg-7,.lazyer-col-xl-7{
+    width:calc(100% / 12 * 7);
+}
+.lazyer-col-sm-8,.lazyer-col-md-8,.lazyer-col-lg-8,.lazyer-col-xl-8{
+    width:calc(100% / 12 * 8);
+}
+.lazyer-col-sm-9,.lazyer-col-md-9,.lazyer-col-lg-9,.lazyer-col-xl-9{
+    width:calc(100% / 12 * 9);
+}
+.lazyer-col-sm-10,.lazyer-col-md-10,.lazyer-col-lg-10,.lazyer-col-xl-10{
+    width:calc(100% / 12 * 10);
+}
+.lazyer-col-sm-11,.lazyer-col-md-11,.lazyer-col-lg-11,.lazyer-col-xl-11{
+    width:calc(100% / 12 * 11);
+}
+.lazyer-col-sm-12,.lazyer-col-md-12,.lazyer-col-lg-12,.lazyer-col-xl-12{
+    width:100%;
+}
+@media screen and (max-width: 1199px) {
+    .lazyer-col-xl-1,.lazyer-col-xl-2,.lazyer-col-xl-3,.lazyer-col-xl-4,.lazyer-col-xl-5,.lazyer-col-xl-6,.lazyer-col-xl-7,.lazyer-col-xl-8,.lazyer-col-xl-9,.lazyer-col-xl-10,.lazyer-col-xl-11,.lazyer-col-xl-12{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 991px) {
+    .lazyer-col-lg-1,.lazyer-col-lg-2,.lazyer-col-lg-3,.lazyer-col-lg-4,.lazyer-col-lg-5,.lazyer-col-lg-6,.lazyer-col-lg-7,.lazyer-col-lg-8,.lazyer-col-lg-9,.lazyer-col-lg-10,.lazyer-col-lg-11,.lazyer-col-lg-12{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .lazyer-col-md-1,.lazyer-col-md-2,.lazyer-col-md-3,.lazyer-col-md-4,.lazyer-col-md-5,.lazyer-col-md-6,.lazyer-col-md-7,.lazyer-col-md-8,.lazyer-col-md-9,.lazyer-col-md-10,.lazyer-col-md-11,.lazyer-col-md-12{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .lazyer-col-sm-1,.lazyer-col-sm-2,.lazyer-col-sm-3,.lazyer-col-sm-4,.lazyer-col-sm-5,.lazyer-col-sm-6,.lazyer-col-sm-7,.lazyer-col-sm-8,.lazyer-col-sm-9,.lazyer-col-sm-10,.lazyer-col-sm-11,.lazyer-col-sm-12{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 319px) {
+    .lazyer-col{
+        flex-basis: auto;
+        width: 100%;
+    }
+}
+@media screen and (min-width: 576px) {
+    .lazyer-col-sm-1{
+        width: calc(100% / 12);
+    }
+    .lazyer-col-sm-2{
+        width:calc(100% / 6);
+    }
+    .lazyer-col-sm-3{
+        width:calc(100% / 4);
+    }
+    .lazyer-col-sm-4{
+        width:calc(100% / 3);
+    }
+    .lazyer-col-sm-5{
+        width:calc(100% / 12 * 5);
+    }
+    .lazyer-col-sm-6{
+        width:calc(100% / 2);
+    }
+    .lazyer-col-sm-7{
+        width:calc(100% / 12 * 7);
+    }
+    .lazyer-col-sm-8{
+        width:calc(100% / 12 * 8);
+    }
+    .lazyer-col-sm-9{
+        width:calc(100% / 12 * 9);
+    }
+    .lazyer-col-sm-10{
+        width:calc(100% / 12 * 10);
+    }
+    .lazyer-col-sm-11{
+        width:calc(100% / 12 * 11);
+    }
+}
+@media screen and (min-width: 768px) {
+    .lazyer-col-md-1{
+        width: calc(100% / 12);
+    }
+    .lazyer-col-md-2{
+        width:calc(100% / 6);
+    }
+    .lazyer-col-md-3{
+        width:calc(100% / 4);
+    }
+    .lazyer-col-md-4{
+        width:calc(100% / 3);
+    }
+    .lazyer-col-md-5{
+        width:calc(100% / 12 * 5);
+    }
+    .lazyer-col-md-6{
+        width:calc(100% / 2);
+    }
+    .lazyer-col-md-7{
+        width:calc(100% / 12 * 7);
+    }
+    .lazyer-col-md-8{
+        width:calc(100% / 12 * 8);
+    }
+    .lazyer-col-md-9{
+        width:calc(100% / 12 * 9);
+    }
+    .lazyer-col-md-10{
+        width:calc(100% / 12 * 10);
+    }
+    .lazyer-col-md-11{
+        width:calc(100% / 12 * 11);
+    }
+}
+@media screen and (min-width: 992px) {
+    .lazyer-col-lg-1{
+        width: calc(100% / 12);
+    }
+    .lazyer-col-lg-2{
+        width:calc(100% / 6);
+    }
+    .lazyer-col-lg-3{
+        width:calc(100% / 4);
+    }
+    .lazyer-col-lg-4{
+        width:calc(100% / 3);
+    }
+    .lazyer-col-lg-5{
+        width:calc(100% / 12 * 5);
+    }
+    .lazyer-col-lg-6{
+        width:calc(100% / 2);
+    }
+    .lazyer-col-lg-7{
+        width:calc(100% / 12 * 7);
+    }
+    .lazyer-col-lg-8{
+        width:calc(100% / 12 * 8);
+    }
+    .lazyer-col-lg-9{
+        width:calc(100% / 12 * 9);
+    }
+    .lazyer-col-lg-10{
+        width:calc(100% / 12 * 10);
+    }
+    .lazyer-col-lg-11{
+        width:calc(100% / 12 * 11);
+    }
+}
+@media screen and (min-width: 1200px) {
+    .lazyer-col-xl-1{
+        width: calc(100% / 12);
+    }
+    .lazyer-col-xl-2{
+        width:calc(100% / 6);
+    }
+    .lazyer-col-xl-3{
+        width:calc(100% / 4);
+    }
+    .lazyer-col-xl-4{
+        width:calc(100% / 3);
+    }
+    .lazyer-col-xl-5{
+        width:calc(100% / 12 * 5);
+    }
+    .lazyer-col-xl-6{
+        width:calc(100% / 2);
+    }
+    .lazyer-col-xl-7{
+        width:calc(100% / 12 * 7);
+    }
+    .lazyer-col-xl-8{
+        width:calc(100% / 12 * 8);
+    }
+    .lazyer-col-xl-9{
+        width:calc(100% / 12 * 9);
+    }
+    .lazyer-col-xl-10{
+        width:calc(100% / 12 * 10);
+    }
+    .lazyer-col-xl-11{
+        width:calc(100% / 12 * 11);
+    }
+}

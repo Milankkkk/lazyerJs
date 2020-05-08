@@ -1,0 +1,15 @@
+*{
+    margin:0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+.waterfall{
+    display: flex;
+    position: relative;
+}
+.waterfall img{
+    position: absolute;
+    margin: 5px ;
+    transition:all .4s;
+}

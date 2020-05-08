@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+#tailorImgContainer{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    margin: 30px auto;
+    border-radius: 5px;
+    border: 1px solid #E0DDE0;
+    width: 700px;
+}
+#workArea,#overlay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#workArea{
+    width: 500px;
+    height: 500px;
+    background-color: #333;
+}
+#overlay{
+    position: relative;
+}
+#overlayInnerBg{
+    width: 100%;
+    height: 100%;
+    background-color:rgba(255,255,255,0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#showBox{
+    position: absolute;
+    cursor: move;
+    display: none;
+}
+#overlayInnerBox{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+#overlayInnerImg{
+    position: absolute;
+}
+#zoom{
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    bottom: -4px;
+    right: -4px;
+    background-color: white;
+    border-radius: 50%;
+    cursor:se-resize ;
+    border: 1px solid black;
+    z-index: 2000;
+}
+.imageInputBox{
+    margin-top: 20px;
+    text-align: center;
+}
+.btn {
+    padding:8px 10px;
+    font-size: 16px;
+    border-radius: 3px;
+    background-color:#409eff;
+    text-align: center;
+    cursor: pointer;
+    color: #ffffff;
+    box-shadow:  1px 1px 3px #345aff;
+}
+.btn:hover {
+    background-color: #4b89ff;
+}
+.showImgBox{
+    flex: 1;
+    padding:0 20px;
+    color: #999999;
+    text-align: center;
+}
+.showImgTitle{
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.showImgBox img{
+    border: 1px solid #E0DDE0;
+}
+.showImgList .text{
+    font-size: 12px;
+}

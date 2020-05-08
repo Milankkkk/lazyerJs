@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lazyer</title>
+</head>
+<body>
+  <div class="lazyer-container is-vertical lazyer-index-container">
+      <div class="lazyer-header lazyer-index-header">
+          <div class="lazyer-index-header-left">LazyerJs<span style="float: right;
+    font-size: 8px;
+    position: absolute;
+    margin-top: 22px;
+    margin-left: 18px;">作者：cpx</span></div>
+          <div class="lazyer-index-header-right">
+              <ul>
+                  <li><a class="aCur">组件</a></li>
+                  <li><a>插件</a></li>
+              </ul>
+          </div>
+      </div>
+
+      <div class="lazyer-container">
+          <div class="lazyer-aside lazyer-index-aside">
+              <div class="lazyer-index-aside-content">
+                  <div class="lazyer-index-aside-module">
+                      <div class="lazyer-index-aside-title">组件</div>
+                      <div class="lazyer-index-aside-stitle">Basic</div>
+                      <div class="lazyer-index-aside-item"><a href="./layout.html"  target="iframe" class="aCur">Layout 布局</a></div>
+                      <div class="lazyer-index-aside-item"><a href="./container.html" target="iframe">Container 布局容器</a></div>
+                      <div class="lazyer-index-aside-item"><a href="./color.html" target="iframe">Color 色彩</a></div>
+                      <div class="lazyer-index-aside-item"><a href="./typography.html" target="iframe">Typography 字体</a></div>
+                      <div class="lazyer-index-aside-item"><a href="./border.html" target="iframe">Border 边框</a></div>
+                      <div class="lazyer-index-aside-item"><a href="./button.html" target="iframe">Button 按钮</a></div>
+                      <div class="lazyer-index-aside-item"><a href="./linkText.html" target="iframe">Link 文字链接</a></div>
+                      <div class="lazyer-index-aside-stitle">Form</div>
+                      <div class="lazyer-index-aside-item"><a href="./datePicker.html" target="iframe">DatePicker 日期选择器</a></div>
+                  </div>
+                  <div class="lazyer-index-aside-plug">
+                      <div class="lazyer-index-aside-title">插件</div>
+                      <div class="lazyer-index-aside-item"><a href="./carousel.html" target="iframe">Carousel 轮播</a></div>
+                      <div class="lazyer-index-aside-item"><a href="./dataTables.html" target="iframe">DataTables 表格</a></div>
+                      <div class="lazyer-index-aside-item"><a href="./drag.html" target="iframe">Drag 滑动验证</a></div>
+                      <div class="lazyer-index-aside-item"><a href="./tailorImg.html" target="iframe">TailorImg 裁剪图片</a></div>
+                      <div class="lazyer-index-aside-item"><a href="./uploadImg.html" target="iframe">UploadImg 异步上传图片</a></div>
+                      <div class="lazyer-index-aside-item"><a href="./waterfall.html" target="iframe">Waterfall 瀑布流懒加载</a></div>
+                  </div>
+              </div>
+          </div>
+          <div class="lazyer-main lazyer-index-main">
+              <iframe name="iframe" src="layout.html"></iframe>
+          </div>
+      </div>
+  </div>
+</body>
+<script src="lazyerJs.js"></script>
+<script>
+    lazyerJs.init(function () {
+        let app = lazyerJs;
+        let $ = app.$;
+        app.requseModule(['index'],function () {
+            let page = app.index;
+            page.setIndex();
+        })
+    });
+</script>
+</html>

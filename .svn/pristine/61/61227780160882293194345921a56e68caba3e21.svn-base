@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>typography 字体</title>
+</head>
+<body>
+    <h2>Typography 字体</h2>
+    <p>我们对字体进行统一规范，力求在各个操作系统下都有最佳展示效果。</p>
+    <h3>字体</h3>
+    <img src="./lazyer_resource/images/typography/typography.png" style="margin-top: 10px;">
+    <h3>字号</h3>
+    <table class="lazyer-index-table lazyer-typography-table" >
+        <thead><th>层级</th><th>字体大小</th><th>举例</th></thead>
+        <tbody>
+        <tr class="lazyer-typography-tr1"><td>辅助文字</td><td>12px Extra Small</td><td>用 LazyerJs 快速搭建页面</td></tr>
+        <tr class="lazyer-typography-tr2"><td>正文（小）</td><td>13px Small</td><td>用 LazyerJs 快速搭建页面</td></tr>
+        <tr class="lazyer-typography-tr3"><td>正文</td><td>14px Base</td><td>用 LazyerJs 快速搭建页面</td></tr>
+        <tr class="lazyer-typography-tr4"><td>小标题</td><td>16px Medium</td><td>用 LazyerJs 快速搭建页面</td></tr>
+        <tr class="lazyer-typography-tr5"><td>标题</td><td>18px large</td><td>用 LazyerJs 快速搭建页面</td></tr>
+        <tr class="lazyer-typography-tr6"><td>主标题</td><td>20px Extra large</td><td>用 LazyerJs 快速搭建页面</td></tr>
+        </tbody>
+    </table>
+    <h3>行高</h3>
+    <div class="lazyer-typography-lineheight">
+        <img src="./lazyer_resource/images/typography/lineheight.png">
+        <div class="lazyer-typography-lineheight-box">
+            <div>
+                <div>line-height:1</div>
+                <div>无行高</div>
+            </div>
+            <div>
+                <div>line-height:1.3</div>
+                <div>紧凑</div>
+            </div>
+            <div>
+                <div>line-height:1.5</div>
+                <div>常规</div>
+            </div>
+            <div>
+                <div>line-height:1.7</div>
+                <div>宽松</div>
+            </div>
+        </div>
+    </div>
+    <h3>Font-family 代码</h3>
+    <div class="lazyer-typography-code">font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;</div>
+</body>
+<script src="lazyerJs.js"></script>
+<script>
+    lazyerJs.init(function(){});
+</script>
+</html>

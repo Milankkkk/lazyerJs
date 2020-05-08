@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>uploadImg  异步上传图片</title>
+</head>
+<body>
+    <h2>UploadImg  异步上传图片</h2>
+    <div id="imgfileBox">
+        <div class="imgBox">
+            <img src="./lazyer_resource/images/upLoadImg/addImg.jpg"  id="imgFiles">
+            <div id="imgLook">
+                <div style="clear: both;"></div>
+            </div>
+        </div>
+        <input type="button" value="确定上传" id="ImgUpStartBtn" />
+    </div>
+    <h3>UploadImg Attributes</h3>
+    <table class="lazyer-index-table">
+        <thead><th>参数</th><th>说明</th><th>类型</th><th>可选值</th><th>默认值</th></thead>
+        <tbody>
+        <tr><td>imgLength</td><td>上传图片最大大小，单位(M)</td><td>number</td><td>—</td><td>1</td></tr>
+        <tr><td>imgMaxCount</td><td>最多选中图片张数</td><td>number</td><td>—</td><td>4</td></tr>
+        <tr><td>imgAjaxPath</td><td>异步传输服务端位置</td><td>http</td><td>—</td><td>—</td></tr>
+        </tbody>
+    </table>
+    <pre style="background: #202f3d;
+    color: #fff;">
+
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en"&gt;
+    &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;uploadImg  异步上传图片&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;h2&gt;UploadImg  异步上传图片&lt;/h2&gt;
+    &lt;div id="imgfileBox"&gt;
+    &lt;div class="imgBox"&gt;
+    &lt;img src="./lazyer_resource/images/upLoadImg/addImg.jpg"  id="imgFiles"&gt;
+    &lt;div id="imgLook"&gt;
+    &lt;div style="clear: both;"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;input type="button" value="确定上传" id="ImgUpStartBtn" /&gt;
+    &lt;/div&gt;
+    &lt;h3&gt;UploadImg Attributes&lt;/h3&gt;
+    &lt;table class="lazyer-index-table"&gt;
+    &lt;thead&gt;&lt;th&gt;参数&lt;/th&gt;&lt;th&gt;说明&lt;/th&gt;&lt;th&gt;类型&lt;/th&gt;&lt;th&gt;可选值&lt;/th&gt;&lt;th&gt;默认值&lt;/th&gt;&lt;/thead&gt;
+    &lt;tbody&gt;
+    &lt;tr&gt;&lt;td&gt;imgLength&lt;/td&gt;&lt;td&gt;上传图片最大大小，单位(M)&lt;/td&gt;&lt;td&gt;number&lt;/td&gt;&lt;td&gt;—&lt;/td&gt;&lt;td&gt;1&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;imgMaxCount&lt;/td&gt;&lt;td&gt;最多选中图片张数&lt;/td&gt;&lt;td&gt;number&lt;/td&gt;&lt;td&gt;—&lt;/td&gt;&lt;td&gt;4&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;imgAjaxPath&lt;/td&gt;&lt;td&gt;异步传输服务端位置&lt;/td&gt;&lt;td&gt;http&lt;/td&gt;&lt;td&gt;—&lt;/td&gt;&lt;td&gt;—&lt;/td&gt;&lt;/tr&gt;
+    &lt;/tbody&gt;
+    &lt;/table&gt;
+    &lt;/body&gt;
+    &lt;script src="lazyerJs.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+    lazyerJs.init(function () {
+    let app = lazyerJs;
+    let $ = app.$;
+    app.requseModule(['uploadImg'],function () {
+    let page = app.uploadImg;
+    page.setImgAjaxUrl('http://xx.cn/abcd.php?yzy=1');
+    page.setUploadImg();
+    })
+    });
+    &lt;/script&gt;
+    &lt;/html&gt;
+        -------------php----------------
+        &lt;?php
+        ini_set('display_errors',E_ALL);
+        header("Content-Type: application/json; charset=utf8");
+        header('Access-Control-Allow-Origin: *');
+        $postData = $_POST;
+        if ($postData['imgBase'])
+        {
+            $temp = explode('data:image/png;base64,',$postData['imgBase']);
+            if($temp[1]){
+                $fileName = md5($temp[1]).'.'.$postData['imgFormat'];
+                file_put_contents(__DIR__.'/upload/'.$fileName,base64_decode($temp[1]));
+                echo json_encode(['code'=&gt;200,'data'=&gt;'http://xx.cn/upload/'.$fileName]);
+            }
+        }
+        else
+        {
+            echo "Invalid file";
+        }
+
+
+
+    </pre>
+</body>
+<script src="lazyerJs.js"></script>
+<script>
+    lazyerJs.init(function () {
+        let app = lazyerJs;
+        let $ = app.$;
+        app.requseModule(['uploadImg'],function () {
+            let page = app.uploadImg;
+            page.setImgAjaxUrl('http://zztdw.cn/abcd.php?yzy=1');
+            page.setUploadImg();
+        })
+    });
+</script>
+</html>

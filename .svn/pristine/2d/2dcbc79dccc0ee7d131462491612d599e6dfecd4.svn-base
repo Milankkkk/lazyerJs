@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>waterfall 瀑布流懒加载</title>
+</head>
+<body>
+    <h2>Waterfall 瀑布流懒加载</h2>
+    <h3>Waterfall Attributes</h3>
+    <table class="lazyer-index-table">
+        <thead><th>参数</th><th>说明</th><th>类型</th><th>可选值</th><th>默认值</th></thead>
+        <tbody>
+        <tr><td>imgMargin</td><td>每列图片之间的距离</td><td>number</td><td>—</td><td>10</td></tr>
+        <tr><td>imgWidth</td><td>图片宽度 + 每列图片之间的距离</td><td>number</td><td>—</td><td>100 + 10</td></tr>
+        </tbody>
+    </table>
+
+    <p>code</p>
+    <pre style="background: #202f3d;
+    color: #fff;">
+
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en"&gt;
+    &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;waterfall 瀑布流懒加载&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;h2&gt;Waterfall 瀑布流懒加载&lt;/h2&gt;
+    &lt;h3&gt;Waterfall Attributes&lt;/h3&gt;
+    &lt;table class="lazyer-index-table"&gt;
+    &lt;thead&gt;&lt;th&gt;参数&lt;/th&gt;&lt;th&gt;说明&lt;/th&gt;&lt;th&gt;类型&lt;/th&gt;&lt;th&gt;可选值&lt;/th&gt;&lt;th&gt;默认值&lt;/th&gt;&lt;/thead&gt;
+    &lt;tbody&gt;
+    &lt;tr&gt;&lt;td&gt;imgMargin&lt;/td&gt;&lt;td&gt;每列图片之间的距离&lt;/td&gt;&lt;td&gt;number&lt;/td&gt;&lt;td&gt;—&lt;/td&gt;&lt;td&gt;10&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;imgWidth&lt;/td&gt;&lt;td&gt;图片宽度 + 每列图片之间的距离&lt;/td&gt;&lt;td&gt;number&lt;/td&gt;&lt;td&gt;—&lt;/td&gt;&lt;td&gt;100 + 10&lt;/td&gt;&lt;/tr&gt;
+    &lt;/tbody&gt;
+    &lt;/table&gt;
+
+
+
+
+
+    &lt;div id="waterfall" class="waterfall"&gt;
+    &lt;img  src=""  temp="100x100" data-src="http://via.placeholder.com/100x100"  alt="100*100"&gt;
+    &lt;img  src=""  temp="100x70" data-src="http://via.placeholder.com/100x70"  alt="100*70"&gt;
+    &lt;img  src=""  temp="100x150" data-src="http://via.placeholder.com/100x150"  alt="100*150"&gt;
+
+
+
+    &lt;/div&gt;
+    &lt;/body&gt;
+    &lt;script src="lazyerJs.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+    lazyerJs.init(function () {
+    let app = lazyerJs;
+    let $ = app.$;
+    app.requseModule(['waterfall'],function () {
+    let page = app.waterfall;
+    page.init('waterfall');
+    //or
+    //page.setDefaultDivId('waterfall');
+    page.setWaterfall();
+    let html = $('#waterfall').html();
+    page.setPageIsOver(function () {
+    $('#waterfall').append(html)
+    })
+    })
+    });
+
+    &lt;/script&gt;
+    &lt;/html&gt;
+    </pre>
+
+
+    <div id="waterfall" class="waterfall">
+        <img  src=""  temp="100x100" data-src="http://via.placeholder.com/100x100"  alt="100*100">
+        <img  src=""  temp="100x70" data-src="http://via.placeholder.com/100x70"  alt="100*70">
+        <img  src=""  temp="100x150" data-src="http://via.placeholder.com/100x150"  alt="100*150">
+        <img  src=""  temp="100x250" data-src="http://via.placeholder.com/100x250"  alt="100*250">
+        <img  src=""  temp="100x80" data-src="http://via.placeholder.com/100x80"  alt="100*80">
+        <img  src=""  temp="100x90" data-src="http://via.placeholder.com/100x90"  alt="100*90">
+        <img  src=""  temp="100x120" data-src="http://via.placeholder.com/100x120"  alt="100*120">
+        <img  src=""  temp="100x210" data-src="http://via.placeholder.com/100x210"  alt="100*210">
+        <img  src=""  temp="100x230" data-src="http://via.placeholder.com/100x230"  alt="100*230">
+        <img  src=""  temp="100x100" data-src="http://via.placeholder.com/100x100"  alt="100*100">
+        <img  src=""  temp="100x70" data-src="http://via.placeholder.com/100x70"  alt="100*70">
+        <img  src=""  temp="100x150" data-src="http://via.placeholder.com/100x150"  alt="100*150">
+        <img  src=""  temp="100x250" data-src="http://via.placeholder.com/100x250"  alt="100*250">
+        <img  src=""  temp="100x80" data-src="http://via.placeholder.com/100x80"  alt="100*80">
+        <img  src=""  temp="100x90" data-src="http://via.placeholder.com/100x90"  alt="100*90">
+        <img  src=""  temp="100x120" data-src="http://via.placeholder.com/100x120"  alt="100*120">
+        <img  src=""  temp="100x210" data-src="http://via.placeholder.com/100x210"  alt="100*210">
+        <img  src=""  temp="100x230" data-src="http://via.placeholder.com/100x230"  alt="100*230">
+        <img  src=""  temp="100x100" data-src="http://via.placeholder.com/100x100"  alt="100*100">
+        <img  src=""  temp="100x70" data-src="http://via.placeholder.com/100x70"  alt="100*70">
+        <img  src=""  temp="100x150" data-src="http://via.placeholder.com/100x150"  alt="100*150">
+        <img  src=""  temp="100x250" data-src="http://via.placeholder.com/100x250"  alt="100*250">
+        <img  src=""  temp="100x80" data-src="http://via.placeholder.com/100x80"  alt="100*80">
+        <img  src=""  temp="100x90" data-src="http://via.placeholder.com/100x90"  alt="100*90">
+        <img  src=""  temp="100x120" data-src="http://via.placeholder.com/100x120"  alt="100*120">
+        <img  src=""  temp="100x210" data-src="http://via.placeholder.com/100x210"  alt="100*210">
+        <img  src=""  temp="100x230" data-src="http://via.placeholder.com/100x230"  alt="100*230">
+        <img  src=""  temp="100x100" data-src="http://via.placeholder.com/100x100"  alt="100*100">
+        <img  src=""  temp="100x70" data-src="http://via.placeholder.com/100x70"  alt="100*70">
+        <img  src=""  temp="100x150" data-src="http://via.placeholder.com/100x150"  alt="100*150">
+        <img  src=""  temp="100x250" data-src="http://via.placeholder.com/100x250"  alt="100*250">
+        <img  src=""  temp="100x80" data-src="http://via.placeholder.com/100x80"  alt="100*80">
+        <img  src=""  temp="100x90" data-src="http://via.placeholder.com/100x90"  alt="100*90">
+        <img  src=""  temp="100x120" data-src="http://via.placeholder.com/100x120"  alt="100*120">
+        <img  src=""  temp="100x210" data-src="http://via.placeholder.com/100x210"  alt="100*210">
+        <img  src=""  temp="100x230" data-src="http://via.placeholder.com/100x230"  alt="100*230">
+        <img  src=""  temp="100x100" data-src="http://via.placeholder.com/100x100"  alt="100*100">
+        <img  src=""  temp="100x70" data-src="http://via.placeholder.com/100x70"  alt="100*70">
+        <img  src=""  temp="100x150" data-src="http://via.placeholder.com/100x150"  alt="100*150">
+        <img  src=""  temp="100x250" data-src="http://via.placeholder.com/100x250"  alt="100*250">
+        <img  src=""  temp="100x80" data-src="http://via.placeholder.com/100x80"  alt="100*80">
+        <img  src=""  temp="100x90" data-src="http://via.placeholder.com/100x90"  alt="100*90">
+        <img  src=""  temp="100x120" data-src="http://via.placeholder.com/100x120"  alt="100*120">
+        <img  src=""  temp="100x210" data-src="http://via.placeholder.com/100x210"  alt="100*210">
+        <img  src=""  temp="100x230" data-src="http://via.placeholder.com/100x230"  alt="100*230">
+        <img  src=""  temp="100x100" data-src="http://via.placeholder.com/100x100"  alt="100*100">
+        <img  src=""  temp="100x70" data-src="http://via.placeholder.com/100x70"  alt="100*70">
+        <img  src=""  temp="100x150" data-src="http://via.placeholder.com/100x150"  alt="100*150">
+        <img  src=""  temp="100x250" data-src="http://via.placeholder.com/100x250"  alt="100*250">
+        <img  src=""  temp="100x80" data-src="http://via.placeholder.com/100x80"  alt="100*80">
+        <img  src=""  temp="100x90" data-src="http://via.placeholder.com/100x90"  alt="100*90">
+        <img  src=""  temp="100x120" data-src="http://via.placeholder.com/100x120"  alt="100*120">
+        <img  src=""  temp="100x210" data-src="http://via.placeholder.com/100x210"  alt="100*210">
+        <img  src=""  temp="100x230" data-src="http://via.placeholder.com/100x230"  alt="100*230">
+        <img  src=""  temp="100x100" data-src="http://via.placeholder.com/100x100"  alt="100*100">
+        <img  src=""  temp="100x70" data-src="http://via.placeholder.com/100x70"  alt="100*70">
+        <img  src=""  temp="100x150" data-src="http://via.placeholder.com/100x150"  alt="100*150">
+        <img  src=""  temp="100x250" data-src="http://via.placeholder.com/100x250"  alt="100*250">
+        <img  src=""  temp="100x80" data-src="http://via.placeholder.com/100x80"  alt="100*80">
+        <img  src=""  temp="100x90" data-src="http://via.placeholder.com/100x90"  alt="100*90">
+        <img  src=""  temp="100x120" data-src="http://via.placeholder.com/100x120"  alt="100*120">
+        <img  src=""  temp="100x210" data-src="http://via.placeholder.com/100x210"  alt="100*210">
+        <img  src=""  temp="100x230" data-src="http://via.placeholder.com/100x230"  alt="100*230">
+        <img  src=""  temp="100x100" data-src="http://via.placeholder.com/100x100"  alt="100*100">
+        <img  src=""  temp="100x70" data-src="http://via.placeholder.com/100x70"  alt="100*70">
+        <img  src=""  temp="100x150" data-src="http://via.placeholder.com/100x150"  alt="100*150">
+        <img  src=""  temp="100x250" data-src="http://via.placeholder.com/100x250"  alt="100*250">
+        <img  src=""  temp="100x80" data-src="http://via.placeholder.com/100x80"  alt="100*80">
+        <img  src=""  temp="100x90" data-src="http://via.placeholder.com/100x90"  alt="100*90">
+        <img  src=""  temp="100x120" data-src="http://via.placeholder.com/100x120"  alt="100*120">
+        <img  src=""  temp="100x210" data-src="http://via.placeholder.com/100x210"  alt="100*210">
+        <img  src=""  temp="100x230" data-src="http://via.placeholder.com/100x230"  alt="100*230">
+
+    </div>
+</body>
+<script src="lazyerJs.js"></script>
+<script>
+    lazyerJs.init(function () {
+        let app = lazyerJs;
+        let $ = app.$;
+        app.requseModule(['waterfall'],function () {
+            let page = app.waterfall;
+            page.init('waterfall');
+            //or
+            //page.setDefaultDivId('waterfall');
+            page.setWaterfall();
+            let html = $('#waterfall').html();
+            page.setPageIsOver(function () {
+                $('#waterfall').append(html)
+            })
+        })
+    });
+
+</script>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>datePicker  日期选择器</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+</head>
+<body>
+  <h2>DatePicker  日期选择器</h2>
+  <p>用于选择或输入日期</p>
+  <div id="datePicker"></div>
+  <h3 style="margin-top: 80px;">datePicker Attributes</h3>
+  <table class="lazyer-index-table" style="margin-bottom: 50px;">
+      <thead><th>参数</th><th>说明</th><th>类型</th><th>可选值</th><th>默认值</th></thead>
+      <tbody>
+      <tr><td>width</td><td>日期选择器宽度</td><td>string</td><td>—</td><td>250px</td></tr>
+      <tr><td>height</td><td>日期选择器高度</td><td>string</td><td>—</td><td>35px</td></tr>
+      </tbody>
+  </table>
+</body>
+<script src="lazyerJs.js"></script>
+<script>
+    lazyerJs.init(function () {
+        let app = lazyerJs;
+        let $ = app.$;
+        app.requseModule(['datePicker'],function () {
+            let page = app.datePicker;
+            page.init();
+            page.setDate();
+        })
+    });
+</script>
+</html>

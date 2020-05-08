@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>drag  滑动验证</title>
+     <link rel="stylesheet" href="./lazyer_resource/font-awesome-4.7.0/css/font-awesome.css">
+</head>
+<body>
+     <h2>Drag  滑动验证</h2>
+     <div id="drag"></div>
+     <h3 style="margin-top: 80px;">Drag Attributes</h3>
+     <table class="lazyer-index-table" >
+         <thead><th>参数</th><th>说明</th><th>类型</th><th>可选值</th><th>默认值</th></thead>
+         <tbody>
+         <tr><td>width</td><td>滑动验证宽度</td><td>string</td><td>—</td><td>300px</td></tr>
+         <tr><td>height</td><td>滑动验证高度</td><td>string</td><td>—</td><td>36px</td></tr>
+         <tr><td>dragOK</td><td>验证成功函数</td><td>function</td><td>—</td><td>—</td></tr>
+         </tbody>
+     </table>
+     <h3>Code</h3>
+     <pre style="background: #202f3d;
+    color: #fff;">
+
+     &lt;!DOCTYPE html&gt;
+     &lt;html lang="en"&gt;
+     &lt;head&gt;
+       &lt;meta charset="UTF-8"&gt;
+       &lt;title&gt;drag  滑动验证&lt;/title&gt;
+       &lt;link rel="stylesheet" href="./lazyer_resource/font-awesome-4.7.0/css/font-awesome.css"&gt;
+     &lt;/head&gt;
+     &lt;body&gt;
+       &lt;h2&gt;Drag  滑动验证&lt;/h2&gt;
+       &lt;div id="drag"&gt;&lt;/div&gt;
+       &lt;h3 style="margin-top: 80px;"&gt;Drag Attributes&lt;/h3&gt;
+       &lt;table class="lazyer-index-table" &gt;
+         &lt;thead&gt;&lt;th&gt;参数&lt;/th&gt;&lt;th&gt;说明&lt;/th&gt;&lt;th&gt;类型&lt;/th&gt;&lt;th&gt;可选值&lt;/th&gt;&lt;th&gt;默认值&lt;/th&gt;&lt;/thead&gt;
+         &lt;tbody&gt;
+           &lt;tr&gt;&lt;td&gt;width&lt;/td&gt;&lt;td&gt;滑动验证宽度&lt;/td&gt;&lt;td&gt;string&lt;/td&gt;&lt;td&gt;—&lt;/td&gt;&lt;td&gt;300px&lt;/td&gt;&lt;/tr&gt;
+           &lt;tr&gt;&lt;td&gt;height&lt;/td&gt;&lt;td&gt;滑动验证高度&lt;/td&gt;&lt;td&gt;string&lt;/td&gt;&lt;td&gt;—&lt;/td&gt;&lt;td&gt;36px&lt;/td&gt;&lt;/tr&gt;
+           &lt;tr&gt;&lt;td&gt;dragOK&lt;/td&gt;&lt;td&gt;验证成功函数&lt;/td&gt;&lt;td&gt;function&lt;/td&gt;&lt;td&gt;—&lt;/td&gt;&lt;td&gt;—&lt;/td&gt;&lt;/tr&gt;
+         &lt;/tbody&gt;
+       &lt;/table&gt;
+     &lt;/body&gt;
+     &lt;script src="lazyerJs.js"&gt;&lt;/script&gt;
+     &lt;script&gt;
+       lazyerJs.init(function () {
+         let app = lazyerJs;
+         let $ = app.$;
+         app.requseModule(['drag'],function () {
+            let page = app.drag;
+            page.init();
+            page.setDrag();
+         })
+       });
+     &lt;/script&gt;
+     &lt;/html&gt;
+     </pre>
+</body>
+<script src="lazyerJs.js"></script>
+<script>
+    lazyerJs.init(function () {
+        let app = lazyerJs;
+        let $ = app.$;
+        app.requseModule(['drag'],function () {
+            let page = app.drag;
+            page.init();
+            page.setDrag();
+        })
+    });
+
+</script>
+</html>

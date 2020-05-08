@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>uploadImg  异步上传图片</title>
+</head>
+<body>
+    <div id="imgfileBox">
+        <div class="imgBox">
+            <img src="./lazyer_resource/images/upLoadImg/addImg.jpg"  id="imgFiles">
+            <div id="imgLook">
+                <div style="clear: both;"></div>
+            </div>
+        </div>
+        <input type="button" value="确定上传" id="ImgUpStartBtn" />
+    </div>
+</body>
+<script src="lazyerJs.js"></script>
+<script>
+    lazyerJs.init(function () {
+        let app = lazyerJs;
+        let $ = app.$;
+        app.requseModule(['uploadImg'],function () {
+            let page = app.uploadImg;
+            page.setUploadImg();
+        })
+    });
+</script>
+</html>

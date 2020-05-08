@@ -1,0 +1,9 @@
+<form class="lazyer_from">
+<div class="needRenderClass">
+    <p>登入</p>
+    <p>账号<input name="user" value="${{data.showTitle}}"></p>
+    <p>密码<input name="pass"></p>
+    <p><a href="javascript:void(0)" onclick="lazyerJs.from.doSend()">提交</a> <a href="javascript:void(0)" onclick="lazyerJs.router.setRouter('/home/index/index')">返回</a> </p>
+
+</div>
+</form>

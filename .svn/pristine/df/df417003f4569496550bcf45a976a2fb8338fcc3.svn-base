@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+button,input,select{
+    outline: none;
+}
+#dataTables{
+    padding: 30px;
+    min-height: 300px;
+    min-width: 1200px;
+    margin: 0 auto;
+}
+#tabHead{
+    display: flex;
+    justify-content: space-between;
+}
+#showNumBox select{
+    border: 1px solid #E0DDE0;
+    height: 25px;
+    width: 60px;
+    border-radius: 5px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+#searchBox{
+    margin-bottom: 10px;
+}
+#searchBox input{
+    border: 1px solid #E0DDE0;
+    height: 28px;
+    margin-left: 10px;
+    border-radius: 5px;
+    padding:0 10px;
+}
+table{
+    width: 100%;
+    border-left: 1px solid #E0DDE0;
+}
+th{
+    border: 1px solid #E0DDE0;
+    border-left: 0;
+    height: 30px;
+}
+td{
+    border: 1px solid #E0DDE0;
+    border-left: 0;
+    border-top: 0;
+    height: 30px;
+}
+td:last-of-type{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+td a{
+    cursor: pointer;
+    color:#409eff;
+    margin: 0 10px;
+}
+#tabFooter{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.footerR{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+#pageSizeBox{
+    margin: 0 20px;
+}
+#dataLenBox{
+    margin-right: 20px;
+}
+#numBtnBox button{
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    margin: 0 2px;
+    background-color: white;
+    border: 1px solid #E0DDE0;
+    color: #666666;
+    border-radius: 5px;
+}
+#numBtnBox button:hover{
+    background-color:#409eff !important;
+    color: white !important;
+}
+.fa-caret-left,.fa-caret-right{
+    font-size: 15px;
+}
+.numCur{
+    background-color:#409eff !important;
+    color: white !important;
+}
+#numBox{
+    display: inline-block;
+}
+#skipBox input{
+    border: 1px solid #E0DDE0;
+    height: 28px;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+#skipBox button,input[type=button]{
+    width: 50px;
+    height: 28px;
+    background-color:#409eff;
+    cursor: pointer;
+    color: white;
+    border-radius: 3px;
+    margin-left: 5px;
+}
+#skipBox button:hover,input[type=button]:hover{
+    background-color: #4b89ff;
+}
+tr td:nth-of-type(1){
+    text-align: center;
+}
+input[type=button]{
+    margin: 0 10px 0 0;
+}

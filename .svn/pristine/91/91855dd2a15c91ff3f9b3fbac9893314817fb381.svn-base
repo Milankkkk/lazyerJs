@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tailorImg  裁剪图片插件</title>
+</head>
+<body>
+<div id="tailorImgContainer">
+    <div id="workAreaBox">
+        <div id="workArea">
+            <div id="overlay">
+                <img id="avatorImg" onload="avatorImgChanged()" alt="">
+                <div id="overlayInnerBg"></div>
+                <div id="showBox"  onmousedown="startDrag(event)">
+                    <div id="overlayInnerBox">
+                        <img id="overlayInnerImg" onload="avatorImgChanged()" alt="">
+                    </div>
+                    <div id="zoom" onmousedown="startZoom(event)"></div>
+                </div>
+            </div>
+        </div>
+        <div class="imageInputBox">
+            <input id="imageInput" type="file" hidden onchange="ImageInputChanged(event)">
+            <label class="btn" for="imageInput">选择图片</label>
+        </div>
+    </div>
+    <div class="showImgBox">
+        <div class="showImgTitle">预览</div>
+        <div class="showImgList">
+            <div class="imgBox1">
+                <img id="imageShow" src="" alt="">
+                <div class="text"></div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="lazyerJs.js"></script>
+<script>
+    lazyerJs.init(function () {
+        let app = lazyerJs;
+        let $ = app.$;
+        app.requseModule(['tailorImg'],function () {
+            let page = app.tailorImg;
+            page.init();
+            page.setTailor();
+        })
+    });
+</script>
+</body>
+</html>

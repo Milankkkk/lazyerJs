@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="time"></div>
+<div id="showDiv"></div>
+<div id="showDiv1"></div>
+<div class="needRenderClass">
+    ${{data.showTitle}}
+    ${{data.haha}}
+    ${{data.xx}}
+</div>
+<div id="page"></div>
+</body>
+<tpl  class="tplClass" attr-value="value" tplId="goods">
+    <p >${{value.goods_id}}:渲染间隙 ${{value.goods_name}}无用文字填充</p>
+</tpl>
+<tpl  class="tplClass" attr-value="value" tplId="goods1">
+    <p>
+        ${{value.goods_id}}:渲染---间隙 ${{value.goods_name}}无用文打撒所大字填充
+    </p>
+</tpl>
+
+<p>code</p>
+<pre style="background: #202f3d;
+    color: #fff;">
+
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en"&gt;
+    &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Title&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;div id="time"&gt;&lt;/div&gt;
+    &lt;div id="showDiv"&gt;&lt;/div&gt;
+    &lt;div id="showDiv1"&gt;&lt;/div&gt;
+    &lt;div class="needRenderClass"&gt;
+    ${{data.showTitle}}
+    ${{data.haha}}
+    ${{data.xx}}
+    &lt;/div&gt;
+    &lt;div id="page"&gt;&lt;/div&gt;
+    &lt;/body&gt;
+    &lt;tpl  class="tplClass" attr-value="value" tplId="goods"&gt;
+    &lt;p &gt;${{value.goods_id}}:渲染间隙 ${{value.goods_name}}无用文字填充&lt;/p&gt;
+    &lt;/tpl&gt;
+    &lt;tpl  class="tplClass" attr-value="value" tplId="goods1"&gt;
+    &lt;p&gt;
+    ${{value.goods_id}}:渲染---间隙 ${{value.goods_name}}无用文打撒所大字填充
+    &lt;/p&gt;
+    &lt;/tpl&gt;
+
+
+    &lt;script src="lazyerJs.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+
+    //lazyer_resource/conf.js 下的
+    //lazyer_app_base_path:'/lazyerJs',
+    //lazyer_resource_path:'/lazyer_resource',
+    //lazyer_conf_path:'/lazyer_resource',
+    //lazyer_module_path:'/lazyer_resource/module',
+    //三个路径 需要填着正确否则核心文件无法导入
+
+    //框架为自动绑定  若要自定义配置  请先天下lazyer_conf 全局变量然后再引入 lazyerJs.js 实现自定义功能
+
+
+    lazyerJs.init(function () {
+    let app = lazyerJs;
+    let $ = app.$;
+    app.requseModule(['pageHelp','renderTools', 'router'],function () {
+    //6秒后通过路由渲染页面
+    setTimeout(function () {
+    let router = app.router;
+    //设置默认参数
+    app.setModuleConf('router','routerAutoRender',true)
+    router.init();
+    router.setRouter();
+    router.render();
+    },6000);
+
+    //注册全局定时器执行方法
+    lazyerJs.addSystemServiceDo('iTestDo',function () {
+    console.log("我是全局方法")
+    });
+
+
+    //工具类
+    let tools = app.tools;
+    $('#time').html(tools.time.getIntTime());
+    tools.cache.init();
+    tools.cache.set('cacheTest','10',5);
+    console.log(tools.cache.get('cacheTest'),'5秒回收');
+    setTimeout(function () {
+    console.log(tools.cache.get('cacheTest'),'6秒后');
+    },6000);
+
+    //分页案例
+    let page = app.pageHelp;
+    page.setNowPage(tools.query.Get('page'))
+    page.setDataSize(200)
+    page.setRowSize(8)
+    let pageStr = page.doRender(function (page) {
+    return '?page='+page;
+    },
+    function (page) {
+    return `doRenderData(${page})`
+    });
+    $('#page').html(pageStr);
+    page.doRender()
+    //end
+
+    //页面渲染器
+    let renderTools = app.renderTools;
+    renderTools.init();
+    renderTools.renderList('goods',[{goods_id:1,goods_name:213},{goods_id:1,goods_name:213},{goods_id:1,goods_name:213}],'showDiv');
+    renderTools.renderList('goods1',[{goods_id:1,goods_name:213}],'showDiv1');
+    renderTools.setTitle('测试渲染页面');
+    renderTools.setKeywords('测试|渲染');
+    renderTools.setDescription('测试渲染');
+    renderTools.renderInfo({
+    showTitle:'测试渲染单环境',
+    haha:'测试渲染单环境1',
+    xx:'测试渲染单环境2',
+    });
+    //end
+    })
+    });
+
+    &lt;/script&gt;
+    &lt;/html&gt;
+
+
+</pre>
+
+<script src="lazyerJs.js"></script>
+<script>
+
+    //lazyer_resource/conf.js 下的
+    //lazyer_app_base_path:'/lazyerJs',
+    //lazyer_resource_path:'/lazyer_resource',
+    //lazyer_conf_path:'/lazyer_resource',
+    //lazyer_module_path:'/lazyer_resource/module',
+    //三个路径 需要填着正确否则核心文件无法导入
+
+    //框架为自动绑定  若要自定义配置  请先天下lazyer_conf 全局变量然后再引入 lazyerJs.js 实现自定义功能
+
+
+    lazyerJs.init(function () {
+        let app = lazyerJs;
+        let $ = app.$;
+        app.requseModule(['pageHelp','renderTools', 'router'],function () {
+            //6秒后通过路由渲染页面
+            setTimeout(function () {
+                let router = app.router;
+                //设置默认参数
+                app.setModuleConf('router','routerAutoRender',true)
+                router.init();
+                router.setRouter();
+                router.render();
+            },6000);
+
+            //注册全局定时器执行方法
+            lazyerJs.addSystemServiceDo('iTestDo',function () {
+                console.log("我是全局方法")
+            });
+
+
+            //工具类
+            let tools = app.tools;
+            $('#time').html(tools.time.getIntTime());
+            tools.cache.init();
+            tools.cache.set('cacheTest','10',5);
+            console.log(tools.cache.get('cacheTest'),'5秒回收');
+            setTimeout(function () {
+                console.log(tools.cache.get('cacheTest'),'6秒后');
+            },6000);
+
+            //分页案例
+            let page = app.pageHelp;
+            page.setNowPage(tools.query.Get('page'))
+            page.setDataSize(200)
+            page.setRowSize(8)
+            let pageStr = page.doRender(function (page) {
+                return '?page='+page;
+            },
+            function (page) {
+                return `doRenderData(${page})`
+            });
+            $('#page').html(pageStr);
+            page.doRender()
+            //end
+
+            //页面渲染器
+            let renderTools = app.renderTools;
+            renderTools.init();
+            renderTools.renderList('goods',[{goods_id:1,goods_name:213},{goods_id:1,goods_name:213},{goods_id:1,goods_name:213}],'showDiv');
+            renderTools.renderList('goods1',[{goods_id:1,goods_name:213}],'showDiv1');
+            renderTools.setTitle('测试渲染页面');
+            renderTools.setKeywords('测试|渲染');
+            renderTools.setDescription('测试渲染');
+            renderTools.renderInfo({
+                showTitle:'测试渲染单环境',
+                haha:'测试渲染单环境1',
+                xx:'测试渲染单环境2',
+            });
+            //end
+        })
+    });
+
+</script>
+</html>

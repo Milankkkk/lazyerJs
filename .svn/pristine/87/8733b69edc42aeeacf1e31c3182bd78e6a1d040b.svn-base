@@ -1,0 +1,9 @@
+<div>
+    <h1>这啥测试Mobile官网首页</h1>
+    <div class="needRenderClass">
+        ${{data.showTitle}}
+        ${{data.haha}}
+        ${{data.xx}}
+    </div>
+    <a href="javascript:void(0)" onclick="lazyerJs.router.setRouter('/home/index/login')">跳转其他页面</a>
+</div>

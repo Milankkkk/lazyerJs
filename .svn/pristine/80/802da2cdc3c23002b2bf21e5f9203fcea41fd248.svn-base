@@ -1,0 +1,130 @@
+var lazyer_messageBox = {
+    text:'',
+    defaultDiv:'lazyerMessageBoxDiv',
+    defaultCloseBtn:'lazyerCloseMessage',
+    defaultOffBtn:'lazyerCancelMessage',
+    defaultSureBtn:'lazyerSureMessage',
+    showTitleDiv:'lazyerTipTitle',
+    defaultLoadDiv: 'loading',
+    init:function(){
+        let _this = this;
+        let  msgStr =
+            `<div id="${_this.defaultDiv}">
+            <div class="lazyer_messageBox">
+                <div class="lazyer_title">
+                    <span>提示</span>
+                    <strong id="${_this.defaultCloseBtn}">X</strong>
+                </div>
+                <div class="lazyer_content">
+                    <p class="${_this.showTitleDiv}"></p>
+                </div>
+                <div class="lazyer_button">
+                    <button id="${_this.defaultOffBtn}" class="cancelMessage">取消</button>
+                    <button id="${_this.defaultSureBtn}" class="sureMessage">确认</button>
+                </div>
+            </div>
+        </div>`;
+        let loadingStr =
+            ` <div class="${_this.defaultLoadDiv}">
+                <canvas id="canvas" width="60" height="60"></canvas>
+                <p>加载中...</p>
+            </div>`
+        if(lazyerJs.$('#'+_this.defaultDiv).length==0){
+            lazyerJs.$('body').append(msgStr)
+
+        }
+        if(lazyerJs.$('.'+_this.defaultLoadDiv).length==0){
+            lazyerJs.$('body').append(loadingStr)
+        }
+    },
+    setTitle:function(titleStr){
+        let _this = this;
+        lazyerJs.$('.'+_this.showTitleDiv).html(titleStr);
+        return this;
+    },
+    isShowMessageBox(btn) {
+        let _this = this;
+        let $ =  lazyerJs.$;
+        let btns = $(btn)
+        btns.attr('onclick','showMessageFn()')
+        $('#'+_this.defaultSureBtn).attr('onclick','closeMessageFn({msg: "true"})')
+        $('#'+_this.defaultOffBtn).attr('onclick','closeMessageFn({msg: "false"})')
+        $('#'+_this.defaultCloseBtn).attr('onclick','closeMessageFn()')
+        showMessageFn = function() {
+            $('#'+_this.defaultDiv).css('display', 'flex')
+        }
+        closeMessageFn = function(data) {
+            $('#'+_this.defaultDiv).hide()
+            if(data) {
+                if(data.msg == 'true') {
+                  _this.successBtnClick()
+                }else if(data.msg == 'false') {
+                   _this.closeBtnClick()
+                }
+            }else{
+                console.log('仅关闭弹窗')
+            }
+        }
+    },
+    successBtnClick:function () {
+    },
+    closeBtnClick:function () {
+    },
+    setSuccessCallBack:function (f) {
+        if(typeof f == "function"){
+            this.successBtnClick = f;
+            return this;
+        }
+        return this;
+    },
+    setCloseBtnCallBack:function (f) {
+        if(typeof f == "function"){
+            this.closeBtnClick = f;
+            return this;
+        }
+        return this;
+    },
+
+    isShowLoadingBox:function (btn) {
+        let _this = this
+        let $ =  lazyerJs.$;
+        $(btn).attr('onclick', 'showLoadingFn()')
+
+
+        showLoadingFn = function () {
+            draw(1.5)
+            $('.'+ _this.defaultLoadDiv).css({'display': 'flex'})
+        }
+
+        function draw(num) {
+            let testCanvas = $('#canvas')[0];
+            console.log(testCanvas)
+            let context = testCanvas.getContext("2d");
+            context.beginPath();
+            context.arc(30, 30, 25, 0, num * Math.PI, false);
+            context.strokeStyle = '#409eff';
+            context.lineCap="round";
+            context.lineWidth = '4';
+            context.stroke();
+        }
+    },
+    hideLoading : function() {
+        let _this = this
+        let $ =  lazyerJs.$;
+        $('.'+ _this.defaultLoadDiv).css({'display': 'none'})
+    },
+    isShowAlertBox: function (btn) {
+        let _this = this
+        let $ =  lazyerJs.$;
+        $(btn).attr('onclick', 'showAlertFn()')
+        showAlertFn = function () {
+            $("#lazyerAlertbox").animate({top:"0"},function () {
+                let t = setTimeout(function () {
+                    $("#lazyerAlertbox").animate({top:(-$("#lazyerAlertbox").height())});
+                    clearTimeout(t);
+                },1000);
+
+            });
+        }
+    }
+}

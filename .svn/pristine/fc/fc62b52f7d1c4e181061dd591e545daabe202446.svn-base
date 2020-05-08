@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Link 文字链接</title>
+</head>
+<body>
+<h2>Link 文字链接</h2>
+<p>文字超链接</p>
+<h3>基础用法</h3>
+<p>基础的文字链接用法。</p>
+<div class="lazyer-content-container">
+    <a href="index.html"  target="_blank" class="lazyer-link">默认链接</a>
+    <a href="#" class="lazyer-link-primary">主要链接</a>
+    <a href="#" class="lazyer-link-success">成功链接</a>
+    <a href="#" class="lazyer-link-warning">警告链接</a>
+    <a href="#" class="lazyer-link-danger">危险链接</a>
+    <a href="#" class="lazyer-link-info">信息链接</a>
+</div>
+<h3>禁用状态</h3>
+<p>文字链接不可用状态。</p>
+<div class="lazyer-content-container">
+    <a  class="lazyer-link" disabled>默认链接</a>
+    <a  class="lazyer-link-primary" disabled>主要链接</a>
+    <a  class="lazyer-link-success" disabled>成功链接</a>
+    <a  class="lazyer-link-warning" disabled>警告链接</a>
+    <a  class="lazyer-link-danger" disabled>危险链接</a>
+    <a  class="lazyer-link-info" disabled>信息链接</a>
+</div>
+<h3>下划线</h3>
+<p>文字链接下划线。</p>
+<div class="lazyer-content-container">
+    <a  class="lazyer-link lazyer-underline">无下划线</a>
+    <a  class="lazyer-link">有下划线</a>
+</div>
+<h3>包含的类名及其含义</h3>
+<p>基础文字链接类名为：</p>
+<ul class="lazyer-class-box">
+    <li>lazyer-link - 默认链接</li>
+    <li>lazyer-link-primary - 主要链接</li>
+    <li>lazyer-link-success - 成功链接</li>
+    <li>lazyer-link-warning - 警告链接</li>
+    <li>lazyer-link-danger - 危险链接</li>
+    <li>lazyer-link-info - 信息链接</li>
+</ul>
+<p>禁用文字链接添加属性disabled：</p>
+<ul class="lazyer-class-box">
+    <li>disabled - 文字链接不可用状态</li>
+</ul>
+<p>文字链接无下划线类名为：</p>
+<ul class="lazyer-class-box">
+    <li>lazyer-underline - 文字链接无下划线</li>
+</ul>
+</body>
+<script src="lazyerJs.js"></script>
+<script>
+    lazyerJs.init(function () {});
+</script>
+</html>

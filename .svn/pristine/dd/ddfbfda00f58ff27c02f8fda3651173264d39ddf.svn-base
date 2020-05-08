@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<link>
+    <meta charset="UTF-8">
+    <title>layout 布局</title>
+</head>
+<body>
+<h2>Layout  布局</h2>
+<p>通过基础的 12 分栏，迅速简便地创建布局。</p>
+<h3>响应式布局</h3>
+<p>参照了 Bootstrap 的 响应式设计，预设了五个响应尺寸：xs、sm、md、lg 和 xl。</p>
+<div class="lazyer-layout-Box">
+    <p>创建相等宽度的列，自动布局，在移动设备上，即屏幕宽度小于 320px 时，将会上下堆叠排版。</p>
+    <p>.lazyer-col  针对所有设备(超小设备 >= 320px)</p>
+    <div class="lazyer-row">
+        <div class="lazyer-col">col</div>
+        <div class="lazyer-col">col</div>
+        <div class="lazyer-col">col</div>
+    </div>
+</div>
+<div class="lazyer-layout-Box">
+    <p>在移动设备上，即屏幕宽度小于 576px 时，将会上下堆叠排版。</p>
+    <p>.lazyer-col-sm-   平板 - 屏幕宽度 >= 576px</p>
+    <div class="lazyer-row">
+        <div class="lazyer-col-sm-4">col-sm-4</div>
+        <div class="lazyer-col-sm-8">col-sm-8</div>
+    </div>
+</div>
+<div class="lazyer-layout-Box">
+    <p>在移动设备上，即屏幕宽度小于 768px 时，将会上下堆叠排版。</p>
+    <p>.lazyer-col-md-  桌面显示器 - 屏幕宽度 >= 768px</p>
+    <div class="lazyer-row">
+        <div class="lazyer-col-md-3">col-md-3</div>
+        <div class="lazyer-col-md-9">col-md-9</div>
+    </div>
+</div>
+<div class="lazyer-layout-Box">
+    <p>在移动设备上，即屏幕宽度小于 992px 时，将会上下堆叠排版。</p>
+    <p>.lazyer-col-lg-  大桌面显示器 - 屏幕宽度 >= 992px</p>
+    <div class="lazyer-row">
+        <div class="lazyer-col-lg-5">col-lg-5</div>
+        <div class="lazyer-col-lg-7">col-lg-7</div>
+    </div>
+</div>
+<div class="lazyer-layout-Box">
+    <p>在移动设备上，即屏幕宽度小于 1200px 时，将会上下堆叠排版。</p>
+    <p>.lazyer-col-xl-   超大桌面显示器 - 屏幕宽度 >= 1200px</p>
+    <div class="lazyer-row">
+        <div class="lazyer-col-xl-2">col-xl-2</div>
+        <div class="lazyer-col-xl-10">col-xl-10</div>
+    </div>
+</div>
+<div class="lazyer-layout-Box">
+    <p>以下实例演示了在桌面设备的显示器上两个列的宽度各占 50%，如果在平板端则左边的宽度为 25%，右边的宽度为 75%, 在移动手机等小型设备上会堆叠显示。</p>
+    <div class="lazyer-row">
+        <div class="lazyer-col-sm-3 lazyer-col-md-6">col</div>
+        <div class="lazyer-col-sm-9 lazyer-col-md-6">col</div>
+    </div>
+</div>
+<div class="lazyer-layout-Box">
+    <p>以下实例在平板、桌面、大桌面显示器、超大桌面显示器的宽度比例为分别为：25%/75%、50%/50%、33.33%/66.67%、16.67/83.33%, 在移动手机等小型设备上会堆叠显示。</p>
+    <div class="lazyer-row">
+        <div class="lazyer-col-sm-3 lazyer-col-md-6 lazyer-col-lg-4 lazyer-col-xl-2">col</div>
+        <div class="lazyer-col-sm-9 lazyer-col-md-6 lazyer-col-lg-8 lazyer-col-xl-10">col</div>
+    </div>
+</div>
+<h3></h3>
+</body>
+<script src="lazyerJs.js"></script>
+<script>
+    lazyerJs.init(function(){});
+</script>
+
+</html>

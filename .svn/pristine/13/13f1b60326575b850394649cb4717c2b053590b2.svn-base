@@ -1,0 +1,126 @@
+#lazyerMessageBoxDiv {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    display: none;
+}
+#lazyerMessageBoxDiv .lazyer_messageBox {
+    box-sizing: border-box;
+    width: 420px;
+    padding: 18px;
+    background: #fff;
+    border-radius: 8px;
+}
+#lazyerMessageBoxDiv .lazyer_messageBox .lazyer_title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    line-height: 24px;
+    color: #303133;
+}
+#lazyerMessageBoxDiv .lazyer_messageBox .lazyer_title strong {
+    font-weight: normal;
+    font-size: 16px;
+    cursor: pointer;
+}
+#lazyerMessageBoxDiv .lazyer_messageBox .lazyer_content p {
+    font-size: 14px;
+    line-height: 20px;
+    color: #606266;
+}
+#lazyerMessageBoxDiv .lazyer_messageBox .lazyer_button {
+    display: flex;
+    justify-content: flex-end;
+}
+#lazyerMessageBoxDiv .lazyer_messageBox .lazyer_button button {
+    width: 60px;
+    height: 30px;
+    margin-left: 15px;
+    background: #409eff;
+    border: none;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #fff;
+    cursor: pointer;
+}
+#lazyerMessageBoxDiv .lazyer_messageBox .lazyer_button button .cancelMessage {
+    background: #ccc;
+}
+#lazyerMessageBoxDiv .lazyer_messageBox .lazyer_button button :after {
+    border: none;
+}
+.loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+    background: rgba(0,0,0,0.5);
+    /*display: flex;*/
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    display: none;
+}
+.loading #canvas {
+    animation: loading-rotate 1.5s linear infinite;
+}
+@keyframes loading-rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#lazyerAlertbox {
+    position: fixed;
+    top: -400px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 400px;
+    display: block;
+}
+#lazyerAlertbox p {
+    box-sizing: border-box;
+    padding: 10px 15px;
+    margin: 15px 0;
+    background: #edf2fc;
+    border: 1px solid #eee;
+    border-radius: 3px;
+    line-height: 26px;
+    color: #666;
+}
+#lazyerAlertbox p i {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    margin-right: 8px;
+    background: #ddd;
+    border-radius: 50%;
+    font-size: 18px;
+    font-weight: bolder;
+    font-style: normal;
+    text-align: center;
+    line-height: 26px;
+    color: #fff;
+}
+
+.wrap {
+    position: relative;
+    width: 500px;
+    height: 300px;
+    background: #bde2f4;
+}
